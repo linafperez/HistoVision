@@ -1,0 +1,30 @@
+{
+  "pyodide": "0.27.7",
+  "cdn": "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/",
+  "packages": {
+    "numpy": {
+      "version": "2.0.2",
+      "sha256": "ebb61241d962b98b21597d7ce43b67668a6d5bab3acec4fbe958657320d7cd08"
+    },
+    "scipy": {
+      "version": "1.14.1",
+      "sha256": "997c50a61564a8ce6a56ea98a42e7f4427e5eb98475a73233e83df6a184f415c"
+    },
+    "scikit-image": {
+      "version": "0.25.0",
+      "sha256": "788beea853f8cf25a3d4847e5fe7de9c80045491e12e49842f1c3b16fbcd6db8"
+    },
+    "opencv-python": {
+      "version": "4.10.0.84",
+      "sha256": "fae5731bfaa3590eefd92b70fb78a090882031f31905451230b2804e3d576800"
+    },
+    "pandas": {
+      "version": "2.2.3",
+      "sha256": "5502f0f94f93a482b851d0b8ca43be692c1b8d20215a168313656847ff74d63a"
+    },
+    "pillow": {
+      "version": "10.2.0",
+      "sha256": "43eab147a9355385a99eeac18fb577d4af2fe4bd0bbd23d3ba3ddb92e72c2815"
+    }
+  }
+}

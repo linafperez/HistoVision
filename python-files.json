@@ -1,0 +1,20 @@
+[
+  "pipelines_histologia/__init__.py",
+  "pipelines_histologia/_linfoma.py",
+  "pipelines_histologia/_mama.py",
+  "pipelines_histologia/_mastocitoma.py",
+  "pipelines_histologia/_melanoma.py",
+  "pipelines_histologia/_neuroendocrino.py",
+  "pipelines_histologia/_procesamiento.py",
+  "pipelines_histologia/_pulmon.py",
+  "pipelines_histologia/_sarcoma.py",
+  "pipelines_histologia/calidad.py",
+  "pipelines_histologia/seleccion.py",
+  "app/__init__.py",
+  "app/compatibilidad.py",
+  "app/operaciones.py",
+  "app/servicio.py",
+  "app/trazabilidad.py",
+  "caracterizacion/__init__.py",
+  "caracterizacion/morfometria.py"
+]

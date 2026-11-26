@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 684" width="850" height="684" role="img" aria-labelledby="title desc">
+<title id="title">Melanoma humano</title><desc id="desc">Tres etapas de procesamiento de HistoVision. Las propuestas se seleccionan automáticamente.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<g font-family="Arial, Helvetica, sans-serif" fill="black" font-size="17">
+<rect x="15" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="15" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="130" y="189.0" font-weight="bold" text-anchor="middle">Preprocesamiento</text>
+<g class="operation" data-operation="melanoma-01" data-title="Filtrado bilateral" role="button" tabindex="0" aria-label="Filtrado bilateral" aria-pressed="false"><rect x="39" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="250.0" text-anchor="middle">
+<tspan x="130" dy="0">Filtrado bilateral</tspan>
+</text>
+</g><path d="M130 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-02" data-title="Blue Ratio y densidad óptica" role="button" tabindex="0" aria-label="Blue Ratio y densidad óptica" aria-pressed="false"><rect x="39" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="334.0" text-anchor="middle">
+<tspan x="130" dy="0">Blue Ratio y densidad</tspan>
+<tspan x="130" dy="20">óptica</tspan>
+</text>
+</g><path d="M130 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-03" data-title="Mapas de tinción y textura" role="button" tabindex="0" aria-label="Mapas de tinción y textura" aria-pressed="false"><rect x="39" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="428.0" text-anchor="middle">
+<tspan x="130" dy="0">Mapas de tinción y</tspan>
+<tspan x="130" dy="20">textura</tspan>
+</text>
+</g><path d="M245 342.0 H305" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="310" y="28.0" width="230" height="628" fill="white" stroke="black" stroke-width="1" />
+<rect x="310" y="28.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="425" y="48.0" font-weight="bold" text-anchor="middle">Procesamiento</text>
+<g class="operation" data-operation="melanoma-04" data-title="Segmentación local con control" role="button" tabindex="0" aria-label="Segmentación local con control" aria-pressed="false"><rect x="334" y="76.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="99.0" text-anchor="middle">
+<tspan x="425" dy="0">Segmentación local</tspan>
+<tspan x="425" dy="20">con control</tspan>
+</text>
+</g><path d="M425 141.0 V166.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-05" data-title="Doble umbral y reconstrucción" role="button" tabindex="0" aria-label="Doble umbral y reconstrucción" aria-pressed="false"><rect x="334" y="170.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="193.0" text-anchor="middle">
+<tspan x="425" dy="0">Doble umbral y</tspan>
+<tspan x="425" dy="20">reconstrucción</tspan>
+</text>
+</g><path d="M425 235.0 V260.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-06" data-title="Identificación de focos densos" role="button" tabindex="0" aria-label="Identificación de focos densos" aria-pressed="false"><rect x="334" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="287.0" text-anchor="middle">
+<tspan x="425" dy="0">Identificación de</tspan>
+<tspan x="425" dy="20">focos densos</tspan>
+</text>
+</g><path d="M425 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-07" data-title="Revisión de competidores externos" role="button" tabindex="0" aria-label="Revisión de competidores externos" aria-pressed="false"><rect x="334" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="371.0" text-anchor="middle">
+<tspan x="425" dy="0">Revisión de</tspan>
+<tspan x="425" dy="20">competidores</tspan>
+<tspan x="425" dy="20">externos</tspan>
+</text>
+</g><path d="M425 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-08" data-title="Selección del foco dominante" role="button" tabindex="0" aria-label="Selección del foco dominante" aria-pressed="false"><rect x="334" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="475.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección del foco</tspan>
+<tspan x="425" dy="20">dominante</tspan>
+</text>
+</g><path d="M425 517.0 V542.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-09" data-title="Banda exterior y GMM condicional" role="button" tabindex="0" aria-label="Banda exterior y GMM condicional" aria-pressed="false"><rect x="334" y="546.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="569.0" text-anchor="middle">
+<tspan x="425" dy="0">Banda exterior y</tspan>
+<tspan x="425" dy="20">GMM condicional</tspan>
+</text>
+</g><path d="M540 342.0 H600" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="605" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="605" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="720" y="189.0" font-weight="bold" text-anchor="middle">Posprocesamiento</text>
+<g class="operation" data-operation="melanoma-10" data-title="Refinamiento celular por evidencia" role="button" tabindex="0" aria-label="Refinamiento celular por evidencia" aria-pressed="false"><rect x="629" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="240.0" text-anchor="middle">
+<tspan x="720" dy="0">Refinamiento celular</tspan>
+<tspan x="720" dy="20">por evidencia</tspan>
+</text>
+</g><path d="M720 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-11" data-title="Conectividad con el foco" role="button" tabindex="0" aria-label="Conectividad con el foco" aria-pressed="false"><rect x="629" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="334.0" text-anchor="middle">
+<tspan x="720" dy="0">Conectividad con el</tspan>
+<tspan x="720" dy="20">foco</tspan>
+</text>
+</g><path d="M720 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="melanoma-12" data-title="Relleno de huecos pequeños" role="button" tabindex="0" aria-label="Relleno de huecos pequeños" aria-pressed="false"><rect x="629" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="428.0" text-anchor="middle">
+<tspan x="720" dy="0">Relleno de huecos</tspan>
+<tspan x="720" dy="20">pequeños</tspan>
+</text>
+</g></g></svg>

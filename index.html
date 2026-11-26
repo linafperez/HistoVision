@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Segmentación y caracterización morfométrica de figuras mitóticas con procesamiento clásico de imágenes.">
+<title>HistoVision</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+<header><div class="brand">HistoVision</div><p>Caracterización morfométrica de figuras mitóticas mediante procesamiento digital de imágenes.</p></header>
+<main>
+<form id="analysis-form">
+<div class="field"><label for="category">Tipo tumoral</label><select id="category" required>
+<option value="">Selecciona un tipo tumoral</option>
+<option value="canine_cutaneous_mast_cell_tumor">Mastocitoma cutáneo canino</option>
+<option value="canine_lung_cancer">Cáncer de pulmón canino</option>
+<option value="canine_lymphoma">Linfoma canino</option>
+<option value="canine_soft_tissue_sarcoma">Sarcoma de tejidos blandos canino</option>
+<option value="human_breast_cancer">Cáncer de mama humano</option>
+<option value="human_melanoma">Melanoma humano</option>
+<option value="human_neuroendocrine_tumor">Tumor neuroendocrino humano</option>
+</select></div>
+<div class="field"><label for="image">Imagen histológica</label><input id="image" type="file" accept="image/png,.png" required aria-describedby="image-help"><small id="image-help">PNG RGB opaco y cuadrado, hasta 20 MB. Centra aproximadamente la figura mitótica. Resolución de análisis de 128 × 128 px.</small></div>
+<button id="analyze" type="submit" disabled>Analizar imagen</button>
+</form>
+<div id="status" role="status" aria-live="polite">Iniciando el motor de análisis…</div>
+<p id="input-info"></p>
+<p id="error" role="alert" hidden></p>
+<section id="results" hidden aria-label="Resultados del análisis">
+<details id="method"><summary>Método de procesamiento</summary><div class="detail-content">
+<p id="method-text"></p><div id="diagram" aria-label="Diagrama interactivo del método"></div>
+<section id="operation-panel" hidden aria-live="polite" aria-label="Operación seleccionada"></section><a id="diagram-download" download>Descargar diagrama SVG</a>
+</div></details>
+<div class="images">
+<figure><img id="original" alt="Recorte histológico original analizado"><figcaption>Original</figcaption></figure>
+<figure><img id="cell" alt="Máscara celular cian superpuesta sobre la imagen"><figcaption>Máscara celular</figcaption></figure>
+<figure><img id="chromatin" alt="Máscara cromatínica amarilla superpuesta sobre la imagen"><figcaption>Máscara cromatínica</figcaption></figure>
+</div>
+<details id="report" open><summary>Reporte de caracterización</summary><div class="detail-content">
+<dl class="metadata"><div><dt>Imagen</dt><dd id="filename"></dd></div><div><dt>Tipo tumoral</dt><dd id="tumor"></dd></div><div><dt>Resolución analizada</dt><dd id="resolution"></dd></div></dl>
+<table aria-label="Características morfométricas"><tbody id="measurements"></tbody></table>
+<p class="report-method" id="report-method"></p>
+<button id="print" class="secondary" type="button">Imprimir / guardar PDF</button>
+</div></details>
+<aside id="warnings" hidden aria-label="Advertencias de segmentación"><p>Revisión de la segmentación</p><ul id="warning-list"></ul></aside>
+<p class="units">Las mediciones se expresan en píxeles. Los componentes cromatínicos corresponden a agrupaciones conectadas.</p>
+</section>
+</main>
+<footer><span>HistoVision · Proyecto académico</span><span>El análisis se ejecuta en este navegador. La imagen permanece en el dispositivo.</span></footer>
+</body>
+</html>

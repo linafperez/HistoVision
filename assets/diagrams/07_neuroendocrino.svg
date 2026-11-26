@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 778" width="850" height="778" role="img" aria-labelledby="title desc">
+<title id="title">Tumor neuroendocrino humano</title><desc id="desc">Tres etapas de procesamiento de HistoVision. Las propuestas se seleccionan automáticamente.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<g font-family="Arial, Helvetica, sans-serif" fill="black" font-size="17">
+<rect x="15" y="216.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="15" y="216.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="130" y="236.0" font-weight="bold" text-anchor="middle">Preprocesamiento</text>
+<g class="operation" data-operation="neuroendocrino-01" data-title="Filtrado bilateral" role="button" tabindex="0" aria-label="Filtrado bilateral" aria-pressed="false"><rect x="39" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="297.0" text-anchor="middle">
+<tspan x="130" dy="0">Filtrado bilateral</tspan>
+</text>
+</g><path d="M130 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-02" data-title="Mapas de tinción y textura" role="button" tabindex="0" aria-label="Mapas de tinción y textura" aria-pressed="false"><rect x="39" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="381.0" text-anchor="middle">
+<tspan x="130" dy="0">Mapas de tinción y</tspan>
+<tspan x="130" dy="20">textura</tspan>
+</text>
+</g><path d="M130 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-03" data-title="Gradientes multicanal" role="button" tabindex="0" aria-label="Gradientes multicanal" aria-pressed="false"><rect x="39" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="485.0" text-anchor="middle">
+<tspan x="130" dy="0">Gradientes multicanal</tspan>
+</text>
+</g><path d="M245 389.0 H305" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="310" y="28.0" width="230" height="722" fill="white" stroke="black" stroke-width="1" />
+<rect x="310" y="28.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="425" y="48.0" font-weight="bold" text-anchor="middle">Procesamiento</text>
+<g class="operation" data-operation="neuroendocrino-04" data-title="Territorios de tejido y tinción" role="button" tabindex="0" aria-label="Territorios de tejido y tinción" aria-pressed="false"><rect x="334" y="76.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="99.0" text-anchor="middle">
+<tspan x="425" dy="0">Territorios de tejido y</tspan>
+<tspan x="425" dy="20">tinción</tspan>
+</text>
+</g><path d="M425 141.0 V166.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-05" data-title="Intensidad y densidad cromatínica" role="button" tabindex="0" aria-label="Intensidad y densidad cromatínica" aria-pressed="false"><rect x="334" y="170.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="193.0" text-anchor="middle">
+<tspan x="425" dy="0">Intensidad y densidad</tspan>
+<tspan x="425" dy="20">cromatínica</tspan>
+</text>
+</g><path d="M425 235.0 V260.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-06" data-title="Multi-Otsu y Random Walker condicional" role="button" tabindex="0" aria-label="Multi-Otsu y Random Walker condicional" aria-pressed="false"><rect x="334" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="287.0" text-anchor="middle">
+<tspan x="425" dy="0">Multi-Otsu y Random</tspan>
+<tspan x="425" dy="20">Walker condicional</tspan>
+</text>
+</g><path d="M425 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-07" data-title="Selección cromatínica por evidencia" role="button" tabindex="0" aria-label="Selección cromatínica por evidencia" aria-pressed="false"><rect x="334" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="371.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección</tspan>
+<tspan x="425" dy="20">cromatínica por</tspan>
+<tspan x="425" dy="20">evidencia</tspan>
+</text>
+</g><path d="M425 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-08" data-title="GMM de regiones competidoras" role="button" tabindex="0" aria-label="GMM de regiones competidoras" aria-pressed="false"><rect x="334" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="475.0" text-anchor="middle">
+<tspan x="425" dy="0">GMM de regiones</tspan>
+<tspan x="425" dy="20">competidoras</tspan>
+</text>
+</g><path d="M425 517.0 V542.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-09" data-title="Corte espacial y banda local" role="button" tabindex="0" aria-label="Corte espacial y banda local" aria-pressed="false"><rect x="334" y="546.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="569.0" text-anchor="middle">
+<tspan x="425" dy="0">Corte espacial y</tspan>
+<tspan x="425" dy="20">banda local</tspan>
+</text>
+</g><path d="M425 611.0 V636.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-10" data-title="Selección automática del cuerpo" role="button" tabindex="0" aria-label="Selección automática del cuerpo" aria-pressed="false"><rect x="334" y="640.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="663.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección automática</tspan>
+<tspan x="425" dy="20">del cuerpo</tspan>
+</text>
+</g><path d="M540 389.0 H600" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="605" y="216.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="605" y="216.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="720" y="236.0" font-weight="bold" text-anchor="middle">Posprocesamiento</text>
+<g class="operation" data-operation="neuroendocrino-11" data-title="Conectividad con el foco" role="button" tabindex="0" aria-label="Conectividad con el foco" aria-pressed="false"><rect x="629" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="287.0" text-anchor="middle">
+<tspan x="720" dy="0">Conectividad con el</tspan>
+<tspan x="720" dy="20">foco</tspan>
+</text>
+</g><path d="M720 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-12" data-title="Relleno de huecos pequeños" role="button" tabindex="0" aria-label="Relleno de huecos pequeños" aria-pressed="false"><rect x="629" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="381.0" text-anchor="middle">
+<tspan x="720" dy="0">Relleno de huecos</tspan>
+<tspan x="720" dy="20">pequeños</tspan>
+</text>
+</g><path d="M720 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="neuroendocrino-13" data-title="Conservación independiente de cromatina" role="button" tabindex="0" aria-label="Conservación independiente de cromatina" aria-pressed="false"><rect x="629" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="465.0" text-anchor="middle">
+<tspan x="720" dy="0">Conservación</tspan>
+<tspan x="720" dy="20">independiente de</tspan>
+<tspan x="720" dy="20">cromatina</tspan>
+</text>
+</g></g></svg>

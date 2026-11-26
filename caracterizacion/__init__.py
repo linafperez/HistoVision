@@ -1,0 +1,1 @@
+﻿from .morfometria import caracterizar

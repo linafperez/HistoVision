@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 684" width="850" height="684" role="img" aria-labelledby="title desc">
+<title id="title">Linfoma canino</title><desc id="desc">Tres etapas de procesamiento de HistoVision. Las propuestas se seleccionan automáticamente.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<g font-family="Arial, Helvetica, sans-serif" fill="black" font-size="17">
+<rect x="15" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="15" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="130" y="189.0" font-weight="bold" text-anchor="middle">Preprocesamiento</text>
+<g class="operation" data-operation="linfoma-01" data-title="Filtrado bilateral" role="button" tabindex="0" aria-label="Filtrado bilateral" aria-pressed="false"><rect x="39" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="250.0" text-anchor="middle">
+<tspan x="130" dy="0">Filtrado bilateral</tspan>
+</text>
+</g><path d="M130 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-02" data-title="Mapas cromáticos y de tinción" role="button" tabindex="0" aria-label="Mapas cromáticos y de tinción" aria-pressed="false"><rect x="39" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="334.0" text-anchor="middle">
+<tspan x="130" dy="0">Mapas cromáticos y</tspan>
+<tspan x="130" dy="20">de tinción</tspan>
+</text>
+</g><path d="M130 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-03" data-title="Gradientes multicanal" role="button" tabindex="0" aria-label="Gradientes multicanal" aria-pressed="false"><rect x="39" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="438.0" text-anchor="middle">
+<tspan x="130" dy="0">Gradientes multicanal</tspan>
+</text>
+</g><path d="M245 342.0 H305" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="310" y="28.0" width="230" height="628" fill="white" stroke="black" stroke-width="1" />
+<rect x="310" y="28.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="425" y="48.0" font-weight="bold" text-anchor="middle">Procesamiento</text>
+<g class="operation" data-operation="linfoma-04" data-title="Cuencas multicanal y locales" role="button" tabindex="0" aria-label="Cuencas multicanal y locales" aria-pressed="false"><rect x="334" y="76.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="99.0" text-anchor="middle">
+<tspan x="425" dy="0">Cuencas multicanal y</tspan>
+<tspan x="425" dy="20">locales</tspan>
+</text>
+</g><path d="M425 141.0 V166.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-05" data-title="Jerarquía regional de cuencas" role="button" tabindex="0" aria-label="Jerarquía regional de cuencas" aria-pressed="false"><rect x="334" y="170.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="193.0" text-anchor="middle">
+<tspan x="425" dy="0">Jerarquía regional de</tspan>
+<tspan x="425" dy="20">cuencas</tspan>
+</text>
+</g><path d="M425 235.0 V260.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-06" data-title="Fusión del grafo de adyacencia" role="button" tabindex="0" aria-label="Fusión del grafo de adyacencia" aria-pressed="false"><rect x="334" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="287.0" text-anchor="middle">
+<tspan x="425" dy="0">Fusión del grafo de</tspan>
+<tspan x="425" dy="20">adyacencia</tspan>
+</text>
+</g><path d="M425 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-07" data-title="Asociación por contacto y tinción" role="button" tabindex="0" aria-label="Asociación por contacto y tinción" aria-pressed="false"><rect x="334" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="381.0" text-anchor="middle">
+<tspan x="425" dy="0">Asociación por</tspan>
+<tspan x="425" dy="20">contacto y tinción</tspan>
+</text>
+</g><path d="M425 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-08" data-title="Corte de transición regional" role="button" tabindex="0" aria-label="Corte de transición regional" aria-pressed="false"><rect x="334" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="475.0" text-anchor="middle">
+<tspan x="425" dy="0">Corte de transición</tspan>
+<tspan x="425" dy="20">regional</tspan>
+</text>
+</g><path d="M425 517.0 V542.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-09" data-title="Selección conjunta de máscaras" role="button" tabindex="0" aria-label="Selección conjunta de máscaras" aria-pressed="false"><rect x="334" y="546.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="569.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección conjunta de</tspan>
+<tspan x="425" dy="20">máscaras</tspan>
+</text>
+</g><path d="M540 342.0 H600" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="605" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="605" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="720" y="189.0" font-weight="bold" text-anchor="middle">Posprocesamiento</text>
+<g class="operation" data-operation="linfoma-10" data-title="Componentes en contacto con el foco" role="button" tabindex="0" aria-label="Componentes en contacto con el foco" aria-pressed="false"><rect x="629" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="240.0" text-anchor="middle">
+<tspan x="720" dy="0">Componentes en</tspan>
+<tspan x="720" dy="20">contacto con el foco</tspan>
+</text>
+</g><path d="M720 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-11" data-title="Relleno de huecos pequeños" role="button" tabindex="0" aria-label="Relleno de huecos pequeños" aria-pressed="false"><rect x="629" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="334.0" text-anchor="middle">
+<tspan x="720" dy="0">Relleno de huecos</tspan>
+<tspan x="720" dy="20">pequeños</tspan>
+</text>
+</g><path d="M720 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="linfoma-12" data-title="Conservación independiente de cromatina" role="button" tabindex="0" aria-label="Conservación independiente de cromatina" aria-pressed="false"><rect x="629" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="418.0" text-anchor="middle">
+<tspan x="720" dy="0">Conservación</tspan>
+<tspan x="720" dy="20">independiente de</tspan>
+<tspan x="720" dy="20">cromatina</tspan>
+</text>
+</g></g></svg>

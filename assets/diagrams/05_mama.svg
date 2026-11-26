@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 684" width="850" height="684" role="img" aria-labelledby="title desc">
+<title id="title">Cáncer de mama humano</title><desc id="desc">Tres etapas de procesamiento de HistoVision. Las propuestas se seleccionan automáticamente.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<g font-family="Arial, Helvetica, sans-serif" fill="black" font-size="17">
+<rect x="15" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="15" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="130" y="189.0" font-weight="bold" text-anchor="middle">Preprocesamiento</text>
+<g class="operation" data-operation="mama-01" data-title="Filtrado bilateral" role="button" tabindex="0" aria-label="Filtrado bilateral" aria-pressed="false"><rect x="39" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="250.0" text-anchor="middle">
+<tspan x="130" dy="0">Filtrado bilateral</tspan>
+</text>
+</g><path d="M130 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-02" data-title="Mapas de tinción y CIELAB" role="button" tabindex="0" aria-label="Mapas de tinción y CIELAB" aria-pressed="false"><rect x="39" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="334.0" text-anchor="middle">
+<tspan x="130" dy="0">Mapas de tinción y</tspan>
+<tspan x="130" dy="20">CIELAB</tspan>
+</text>
+</g><path d="M130 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-03" data-title="Gradientes y textura local" role="button" tabindex="0" aria-label="Gradientes y textura local" aria-pressed="false"><rect x="39" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="428.0" text-anchor="middle">
+<tspan x="130" dy="0">Gradientes y textura</tspan>
+<tspan x="130" dy="20">local</tspan>
+</text>
+</g><path d="M245 342.0 H305" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="310" y="28.0" width="230" height="628" fill="white" stroke="black" stroke-width="1" />
+<rect x="310" y="28.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="425" y="48.0" font-weight="bold" text-anchor="middle">Procesamiento</text>
+<g class="operation" data-operation="mama-04" data-title="Geodésico con interior estable" role="button" tabindex="0" aria-label="Geodésico con interior estable" aria-pressed="false"><rect x="334" y="76.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="99.0" text-anchor="middle">
+<tspan x="425" dy="0">Geodésico con</tspan>
+<tspan x="425" dy="20">interior estable</tspan>
+</text>
+</g><path d="M425 141.0 V166.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-05" data-title="Multi-Otsu y reconstrucción" role="button" tabindex="0" aria-label="Multi-Otsu y reconstrucción" aria-pressed="false"><rect x="334" y="170.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="193.0" text-anchor="middle">
+<tspan x="425" dy="0">Multi-Otsu y</tspan>
+<tspan x="425" dy="20">reconstrucción</tspan>
+</text>
+</g><path d="M425 235.0 V260.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-06" data-title="GMM multimodal en banda exterior" role="button" tabindex="0" aria-label="GMM multimodal en banda exterior" aria-pressed="false"><rect x="334" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="287.0" text-anchor="middle">
+<tspan x="425" dy="0">GMM multimodal en</tspan>
+<tspan x="425" dy="20">banda exterior</tspan>
+</text>
+</g><path d="M425 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-07" data-title="Corte regional por apariencia" role="button" tabindex="0" aria-label="Corte regional por apariencia" aria-pressed="false"><rect x="334" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="381.0" text-anchor="middle">
+<tspan x="425" dy="0">Corte regional por</tspan>
+<tspan x="425" dy="20">apariencia</tspan>
+</text>
+</g><path d="M425 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-08" data-title="Contorno activo regional" role="button" tabindex="0" aria-label="Contorno activo regional" aria-pressed="false"><rect x="334" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="475.0" text-anchor="middle">
+<tspan x="425" dy="0">Contorno activo</tspan>
+<tspan x="425" dy="20">regional</tspan>
+</text>
+</g><path d="M425 517.0 V542.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-09" data-title="Selección automática del cuerpo" role="button" tabindex="0" aria-label="Selección automática del cuerpo" aria-pressed="false"><rect x="334" y="546.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="569.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección automática</tspan>
+<tspan x="425" dy="20">del cuerpo</tspan>
+</text>
+</g><path d="M540 342.0 H600" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="605" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="605" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="720" y="189.0" font-weight="bold" text-anchor="middle">Posprocesamiento</text>
+<g class="operation" data-operation="mama-10" data-title="Conectividad con el foco" role="button" tabindex="0" aria-label="Conectividad con el foco" aria-pressed="false"><rect x="629" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="240.0" text-anchor="middle">
+<tspan x="720" dy="0">Conectividad con el</tspan>
+<tspan x="720" dy="20">foco</tspan>
+</text>
+</g><path d="M720 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-11" data-title="Relleno de huecos pequeños" role="button" tabindex="0" aria-label="Relleno de huecos pequeños" aria-pressed="false"><rect x="629" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="334.0" text-anchor="middle">
+<tspan x="720" dy="0">Relleno de huecos</tspan>
+<tspan x="720" dy="20">pequeños</tspan>
+</text>
+</g><path d="M720 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="mama-12" data-title="Conservación de cromatina" role="button" tabindex="0" aria-label="Conservación de cromatina" aria-pressed="false"><rect x="629" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="428.0" text-anchor="middle">
+<tspan x="720" dy="0">Conservación de</tspan>
+<tspan x="720" dy="20">cromatina</tspan>
+</text>
+</g></g></svg>

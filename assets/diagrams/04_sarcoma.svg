@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 684" width="850" height="684" role="img" aria-labelledby="title desc">
+<title id="title">Sarcoma de tejidos blandos canino</title><desc id="desc">Tres etapas de procesamiento de HistoVision. Las propuestas se seleccionan automáticamente.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black" /></marker></defs>
+<rect width="100%" height="100%" fill="white" />
+<g font-family="Arial, Helvetica, sans-serif" fill="black" font-size="17">
+<rect x="15" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="15" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="130" y="189.0" font-weight="bold" text-anchor="middle">Preprocesamiento</text>
+<g class="operation" data-operation="sarcoma-01" data-title="Filtrado bilateral" role="button" tabindex="0" aria-label="Filtrado bilateral" aria-pressed="false"><rect x="39" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="250.0" text-anchor="middle">
+<tspan x="130" dy="0">Filtrado bilateral</tspan>
+</text>
+</g><path d="M130 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-02" data-title="CIELAB y separación H&amp;E" role="button" tabindex="0" aria-label="CIELAB y separación H&amp;E" aria-pressed="false"><rect x="39" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="334.0" text-anchor="middle">
+<tspan x="130" dy="0">CIELAB y separación</tspan>
+<tspan x="130" dy="20">H&amp;E</tspan>
+</text>
+</g><path d="M130 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-03" data-title="Gabor y tensor de orientación" role="button" tabindex="0" aria-label="Gabor y tensor de orientación" aria-pressed="false"><rect x="39" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="130" y="428.0" text-anchor="middle">
+<tspan x="130" dy="0">Gabor y tensor de</tspan>
+<tspan x="130" dy="20">orientación</tspan>
+</text>
+</g><path d="M245 342.0 H305" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="310" y="28.0" width="230" height="628" fill="white" stroke="black" stroke-width="1" />
+<rect x="310" y="28.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="425" y="48.0" font-weight="bold" text-anchor="middle">Procesamiento</text>
+<g class="operation" data-operation="sarcoma-04" data-title="Grafo LAB y Gabor" role="button" tabindex="0" aria-label="Grafo LAB y Gabor" aria-pressed="false"><rect x="334" y="76.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="109.0" text-anchor="middle">
+<tspan x="425" dy="0">Grafo LAB y Gabor</tspan>
+</text>
+</g><path d="M425 141.0 V166.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-05" data-title="Selección cromatínica fija" role="button" tabindex="0" aria-label="Selección cromatínica fija" aria-pressed="false"><rect x="334" y="170.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="193.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección</tspan>
+<tspan x="425" dy="20">cromatínica fija</tspan>
+</text>
+</g><path d="M425 235.0 V260.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-06" data-title="Muestras citoplasmáticas y exteriores" role="button" tabindex="0" aria-label="Muestras citoplasmáticas y exteriores" aria-pressed="false"><rect x="334" y="264.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="277.0" text-anchor="middle">
+<tspan x="425" dy="0">Muestras</tspan>
+<tspan x="425" dy="20">citoplasmáticas y</tspan>
+<tspan x="425" dy="20">exteriores</tspan>
+</text>
+</g><path d="M425 329.0 V354.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-07" data-title="Banda de transición al estroma" role="button" tabindex="0" aria-label="Banda de transición al estroma" aria-pressed="false"><rect x="334" y="358.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="381.0" text-anchor="middle">
+<tspan x="425" dy="0">Banda de transición</tspan>
+<tspan x="425" dy="20">al estroma</tspan>
+</text>
+</g><path d="M425 423.0 V448.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-08" data-title="Corte de apariencia cromática" role="button" tabindex="0" aria-label="Corte de apariencia cromática" aria-pressed="false"><rect x="334" y="452.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="475.0" text-anchor="middle">
+<tspan x="425" dy="0">Corte de apariencia</tspan>
+<tspan x="425" dy="20">cromática</tspan>
+</text>
+</g><path d="M425 517.0 V542.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-09" data-title="Selección automática del cuerpo" role="button" tabindex="0" aria-label="Selección automática del cuerpo" aria-pressed="false"><rect x="334" y="546.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="425" y="569.0" text-anchor="middle">
+<tspan x="425" dy="0">Selección automática</tspan>
+<tspan x="425" dy="20">del cuerpo</tspan>
+</text>
+</g><path d="M540 342.0 H600" stroke="black" fill="none" marker-end="url(#arrow)" />
+<rect x="605" y="169.0" width="230" height="346" fill="white" stroke="black" stroke-width="1" />
+<rect x="605" y="169.0" width="230" height="28" fill="#EBE0F3" stroke="black" stroke-width="1" />
+<text x="720" y="189.0" font-weight="bold" text-anchor="middle">Posprocesamiento</text>
+<g class="operation" data-operation="sarcoma-10" data-title="Conectividad regional" role="button" tabindex="0" aria-label="Conectividad regional" aria-pressed="false"><rect x="629" y="217.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="250.0" text-anchor="middle">
+<tspan x="720" dy="0">Conectividad regional</tspan>
+</text>
+</g><path d="M720 282.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-11" data-title="Relleno de huecos pequeños" role="button" tabindex="0" aria-label="Relleno de huecos pequeños" aria-pressed="false"><rect x="629" y="311.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="334.0" text-anchor="middle">
+<tspan x="720" dy="0">Relleno de huecos</tspan>
+<tspan x="720" dy="20">pequeños</tspan>
+</text>
+</g><path d="M720 376.0 V401.0" stroke="black" fill="none" marker-end="url(#arrow)" />
+<g class="operation" data-operation="sarcoma-12" data-title="Conservación de la cromatina fija" role="button" tabindex="0" aria-label="Conservación de la cromatina fija" aria-pressed="false"><rect x="629" y="405.0" width="182" height="65" fill="white" stroke="black" stroke-width="1" />
+<text x="720" y="428.0" text-anchor="middle">
+<tspan x="720" dy="0">Conservación de la</tspan>
+<tspan x="720" dy="20">cromatina fija</tspan>
+</text>
+</g></g></svg>
