@@ -67,6 +67,7 @@ window.Worker=class extends NativeWorker {
   page.wait_for_selector('#diagram svg')
   count=page.locator('#diagram [data-operation]').count()
   sent=page.evaluate('window.analysisCount')
+  assert page.evaluate('Object.keys(window.receivedResults.at(-1).flujos_etapas).length')>20
   total_calls=0
   for i in range(count):
    group=page.locator('#diagram [data-operation]').nth(i)
@@ -76,6 +77,11 @@ window.Worker=class extends NativeWorker {
    assert page.locator('#operation-panel').is_visible()
    step=page.evaluate('window.receivedResults.at(-1).etapas['+str(i)+']')
    assert page.locator('#operation-panel h3').inner_text()==step['nombre']
+   assert page.locator('#operation-panel [data-stage-operation][data-selected=true]').count()==1
+   assert page.locator('#operation-panel [data-expansion-line]').count()==2
+   assert page.locator('#operation-panel [data-flow-source]').count()>=1
+   assert page.locator('#operation-panel .step-hierarchy [role=button],#operation-panel .step-hierarchy [data-operation]').count()==0
+   assert page.locator('#operation-panel .step-hierarchy').evaluate('(node)=>node.compareDocumentPosition(document.querySelector(".step-explanation")) & Node.DOCUMENT_POSITION_FOLLOWING')
    if step['estado']=='no_ejecutada':
     assert page.locator('#operation-panel img').count()==0
    else:
@@ -83,7 +89,20 @@ window.Worker=class extends NativeWorker {
     for index,call in enumerate(step['llamadas']):
      selector=page.locator('#operation-panel select')
      if selector.count():selector.select_option(str(index))
-     for detail in page.locator('#operation-panel details').all():detail.evaluate('(node)=>node.open=true')
+     assert page.locator('#operation-panel .step-flow-viewport > svg').get_attribute('data-flow-source')==call['flujo_id'] or call['flujo_id'].startswith('cv2.')
+     assert page.locator('#operation-panel [data-edge-type=annotation]').count()>0
+     assert page.locator('#operation-panel .step-explanation').count()==1
+     if call['funcion']=='threshold' and call['parametros'].get('criterio')!='Otsu':
+      assert page.locator('#operation-panel math').count()==0
+     if call['funcion']=='bilateralFilter':
+      assert page.locator('#operation-panel math').count()==1
+     if call['funcion']=='select_body':
+      helper=page.locator('#operation-panel .step-helper').first
+      if helper.count():
+       helper.evaluate('(node)=>node.open=true')
+       helper.locator('svg').wait_for()
+       assert helper.locator('[data-suboperation]').count()>2
+     for detail in page.locator('#operation-panel details:not(.step-helper)').all():detail.evaluate('(node)=>node.open=true')
      image_refs=[pic for field in ('entrada','salida','intermedios') for pic in call[field]]
      ids=[ref['imagen_id'] for ref in image_refs]
      assert page.evaluate('''keys => {

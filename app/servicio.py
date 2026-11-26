@@ -94,5 +94,6 @@ def analizar(content, categoria, nombre, *, registrar_etapas=True):
         diagram = next((Path(__file__).resolve().parents[1] / "assets" / "diagrams").glob("*_"+slug+".svg"))
         response["etapas"] = trace.exportar(diagram.read_text(encoding="utf8"))
         response["imagenes_etapas"] = trace.images
+        response["flujos_etapas"] = trace.flows
     return response
 

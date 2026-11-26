@@ -10,6 +10,7 @@ import textwrap
 import cv2
 import numpy as np
 from .operaciones import BOXES, OPERATIONS, AUXILIARY, CV_ARGUMENTS
+from .flujo import describir_flujo
 
 _IMAGE_KEYS = ("rgb","filtered","smooth","cell","chromatin","candidate","excluded","omitted",
                "labels","markers","seeds","h","e","ratio","edge","edge4","edge6","outer","gabor",
@@ -90,6 +91,36 @@ class RegistroEtapas(AbstractContextManager):
         self.restores=[]
         self.images={}
         self.serialized={}
+        self.flows={}
+        self.flow_names={}
+
+    def _flow(self, function, cv_name=None):
+        original=inspect.unwrap(function)
+        key=('cv2' if cv_name else original.__module__)+'.'+(cv_name or original.__name__)
+        if key not in self.flows:
+            schema=describir_flujo(original,cv_name)
+            self.flows[key]=schema
+            schema['constantes']={}
+            if not cv_name:
+                for name in original.__code__.co_names:
+                    value=_small(original.__globals__.get(name,...))
+                    if name.isupper() and value is not ...:
+                        schema['constantes'][name]=value
+            self.flow_names.setdefault(cv_name or original.__name__,key)
+            if not cv_name and original.__module__ == 'pipelines_histologia._'+self.category:
+                self.flow_names[original.__name__]=key
+            # Direct domain helpers are explanatory subflows, with their own exact
+            # expressions. A registry avoids repeating their schemas in every call.
+            schema['detalles']=[]
+            if not cv_name:
+                for name in original.__code__.co_names:
+                    child=original.__globals__.get(name)
+                    if (inspect.isfunction(child) and inspect.unwrap(child).__module__.startswith('pipelines_histologia')
+                            and inspect.unwrap(child) is not original):
+                        child_key=self._flow(child)
+                        if child_key not in schema['detalles']:
+                            schema['detalles'].append(child_key)
+        return key
 
     def __enter__(self):
         import pipelines_histologia
@@ -129,6 +160,7 @@ class RegistroEtapas(AbstractContextManager):
     def _wrap(self,function,cv_name=None):
         name=cv_name or function.__name__
         fixed=_fixed(function) if not cv_name else []
+        flow_id=self._flow(function,cv_name)
         @wraps(function)
         def observed(*args,**kwargs):
             is_root=name=="segmentar_recorte"
@@ -146,7 +178,7 @@ class RegistroEtapas(AbstractContextManager):
                     bound=inspect.signature(function).bind(*args,**kwargs)
                     bound.apply_defaults()
                     arguments=dict(bound.arguments)
-                event={"funcion":name,"entrada":_arrays(arguments),"parametros":{},
+                event={"funcion":name,"flujo_id":flow_id,"entrada":_arrays(arguments),"parametros":{},
                        "calculados":{},"fijos":fixed,"hijas":[]}
                 for key,value in arguments.items():
                     scalar=_small(value)
@@ -254,7 +286,8 @@ class RegistroEtapas(AbstractContextManager):
                 paragraph,equation=OPERATIONS[kind]
                 operations.append({"id":node.get("data-operation"),"nombre":name,"explicacion":paragraph,
                                    "ecuacion":equation,"estado":"ejecutada" if calls else "no_ejecutada",
-                                   "llamadas":calls,"funciones":names})
+                                   "llamadas":calls,"funciones":names,
+                                   "flujo_ids":[self.flow_names[key] for key in names if key in self.flow_names]})
             return operations
         finally:
             self.saving=False

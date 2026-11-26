@@ -22,10 +22,6 @@ table{border-collapse:collapse;width:100%;max-width:680px;font-size:14px}th,td{b
 .step-heading button{margin:0 0 12px;padding:7px 13px}
 .step-state,.step-source{font-size:12px!important;color:#756a7d}
 .step-equation{overflow-x:auto;padding:12px 0 18px;font-size:19px}
-.step-config{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin:20px 0}
-.step-config:has(>div:only-child){grid-template-columns:1fr}
-.step-secondary svg{width:100%;max-width:400px;max-height:800px}
-.step-secondary figcaption{font-size:12px;color:#756a7d}
 .step-parameters{font-size:12px;margin:12px 0}
 .step-parameters>div{display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,2fr);gap:12px;border-bottom:1px solid #eee8f1;padding:7px 0}
 .step-parameters dt{overflow-wrap:anywhere;color:#756a7d}
@@ -43,4 +39,13 @@ table{border-collapse:collapse;width:100%;max-width:680px;font-size:14px}th,td{b
 .step-images figcaption{font-size:11px;line-height:1.4;overflow-wrap:anywhere}
 .step-proposals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .chosen-proposal{font-weight:bold;background:var(--lavender);padding:5px}
-@media(max-width:600px){.step-config,.step-comparison,.step-proposals{grid-template-columns:1fr}.step-equation{font-size:16px}#operation-panel{min-width:0}}
+@media(max-width:600px){.step-comparison,.step-proposals{grid-template-columns:1fr}.step-equation{font-size:16px}#operation-panel{min-width:0}}
+.step-hierarchy-scroll{max-width:100%;overflow-x:auto;margin:18px 0 24px;background:white}
+.step-hierarchy{display:flex;width:1162px;align-items:flex-start;padding:1px;zoom:.85}
+.step-hierarchy>svg{flex:0 0 310px}
+.step-flow-viewport{flex:0 0 852px;width:852px;overflow:auto;border:1px solid black;background:white;overscroll-behavior:contain}
+.step-flow-viewport>svg,.step-helper>svg{display:block;width:850px;max-width:none;height:auto}
+#operation-panel .step-helper{margin:0;border:0;border-top:1px solid black}
+#operation-panel .step-helper summary{font:700 13px Arial,Helvetica,sans-serif;border-bottom:1px solid black;border-radius:0;padding:9px;background:#ebe0f3}
+.step-config-values>div{padding:0 14px}
+.step-explanation{margin:20px 0 0!important}

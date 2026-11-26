@@ -13,6 +13,7 @@
   "app/__init__.py",
   "app/compatibilidad.py",
   "app/operaciones.py",
+  "app/flujo.py",
   "app/servicio.py",
   "app/trazabilidad.py",
   "caracterizacion/__init__.py",
