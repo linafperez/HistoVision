@@ -1,21 +1,4 @@
 """Metadatos compartidos para explorar las operaciones ejecutadas."""
-OPERATIONS = {
- "bilateral": ("El filtro bilateral promedia cada vecindario con pesos gaussianos de distancia espacial y diferencia cromática. Su salida suaviza la tinción manteniendo las transiciones de color que intervienen en los marcadores y fronteras.", "bilateral"),
- "stain": ("Los mapas combinan transformaciones CIELAB, densidad óptica y separación H&E. La densidad se calcula con −log((I+1)/256) y las respuestas se reescalan mediante los percentiles definidos en cada función; los canales extraídos alimentan las propuestas regionales.", "density"),
- "gradient": ("Los gradientes multicanal miden variaciones locales de luminancia, cromaticidad y tinción. Las combinaciones ponderadas de sus magnitudes refuerzan las transiciones que penalizan el paso entre regiones.", "gradient"),
- "gabor": ("Cada filtro de Gabor combina una sinusoide con una envolvente gaussiana orientada. Las respuestas en varias orientaciones y escalas describen textura y dirección de fibras, utilizadas junto al color al construir las fronteras regionales.", "gabor"),
- "threshold": ("La umbralización separa la respuesta de tinción según los cortes realmente calculados en esta ejecución. Otsu maximiza la varianza entre clases y Multi-Otsu extiende ese criterio a varias clases; los percentiles y la conectividad acotan los candidatos que utilizan los pasos siguientes.", "otsu"),
- "grabcut": ("GrabCut ajusta mezclas de apariencia para las etiquetas de primer plano y fondo y minimiza una energía de asignación más discontinuidades vecinas. Los marcadores registrados fijan o proponen regiones y la salida devuelve las etiquetas obtenidas para esta imagen.", "energy"),
- "association": ("La asociación compara grupos cromatínicos por contacto territorial, separación, tinción y barrera en el intervalo entre ellos. Los criterios se evalúan sobre los componentes de esta ejecución y conservan las categorías de seleccionados, excluidos y ambiguos.", None),
- "regions": ("La propuesta regional utiliza las semillas y las transiciones de la imagen para delimitar territorios conectados. La forma resultante depende del mapa de fronteras y del método indicado en los parámetros de la llamada.", "energy"),
- "graph": ("La imagen se divide en parcelas conectadas y se construye un grafo con contactos entre parcelas adyacentes. El color, la textura y la intensidad de la frontera describen cada nodo y arista antes del modelado o la fusión.", None),
- "merge": ("La fusión une regiones adyacentes cuyo coste combina diferencia de apariencia y barrera de contacto. Después de una unión se actualizan medias, áreas y contactos, de modo que las decisiones siguientes usan la región agregada.", None),
- "appearance": ("Se ajustan distribuciones de apariencia a muestras citoplasmáticas y exteriores obtenidas en la imagen actual. Las mezclas gaussianas representan varias tonalidades y sus log-verosimilitudes generan la evidencia de pertenencia que recibe el corte espacial.", "gmm"),
- "selection": ("Las propuestas se comparan mediante los indicadores internos de tinción, frontera y consistencia de las máscaras. La entrada muestra las alternativas realmente evaluadas y la salida identifica la propuesta elegida; los valores son criterios descriptivos de selección.", None),
- "contour": ("La evolución del contorno combina la evidencia regional y el suavizado dentro del dominio permitido. Sus regiones fijas y las condiciones de parada limitan los cambios en cada iteración; se muestran las máscaras de entrada y salida de la llamada real.", "energy"),
- "morphology": ("El refinamiento usa conectividad, erosión o relleno de huecos según la función ejecutada. Las restricciones conservan el contacto con el foco y limitan las modificaciones a los píxeles admisibles, manteniendo la cromatina en una máscara independiente.", None),
- "rescue": ("El rescate examina focos oscuros y verifica dominancia, posición, tinción y apoyo del borde antes de cambiar la propuesta. Cuando sus condiciones no se cumplen se conserva la propuesta disponible y el material pendiente queda registrado como ambiguo.", None),
-}
 # Each list follows the existing SVG boxes, by column and vertical position.
 BOXES = {
  "mastocitoma": [

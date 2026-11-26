@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 642" role="img" aria-labelledby="title desc" data-block-count="5">
+<title id="title">Modelos de apariencia regional</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="618" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Procesamiento</tspan></text>
+<g data-stage-operation="neuroendocrino-04" data-selected="false"><rect x="26" y="58" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="84.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Territorios de tejido y</tspan><tspan x="118" dy="17">tinción</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="neuroendocrino-05" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="164.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Intensidad y densidad</tspan><tspan x="118" dy="17">cromatínica</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="neuroendocrino-06" data-selected="false"><rect x="26" y="218" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="244.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Multi-Otsu y Random</tspan><tspan x="118" dy="17">Walker condicional</tspan></text>
+</g>
+<path d="M118 278 V294" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="neuroendocrino-07" data-selected="false"><rect x="26" y="298" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="316.0" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Selección</tspan><tspan x="118" dy="17">cromatínica por</tspan><tspan x="118" dy="17">evidencia</tspan></text>
+</g>
+<path d="M118 358 V374" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="neuroendocrino-08" data-selected="true"><rect x="26" y="378" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="404.5" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">GMM de regiones</tspan><tspan x="118" dy="17">competidoras</tspan></text>
+</g>
+<path d="M118 438 V454" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M210 378 L300 12 M210 438 L300 630" stroke="black" fill="none" data-expansion-lines="2"/>
+<g data-stage-operation="neuroendocrino-09" data-selected="false"><rect x="26" y="458" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="484.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Corte espacial y</tspan><tspan x="118" dy="17">banda local</tspan></text>
+</g>
+<path d="M118 518 V534" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="neuroendocrino-10" data-selected="false"><rect x="26" y="538" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="564.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Selección automática</tspan><tspan x="118" dy="17">del cuerpo</tspan></text>
+</g>
+<rect x="300" y="12" width="688" height="618" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Modelos de apariencia regional</tspan></text>
+<path d="M510.0 235.5 V247.5 H420.0 V256.5" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 235.5 V247.5 H600.0 V256.5" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M420.0 334.5 V346.5 H510.0 V355.5" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M600.0 334.5 V346.5 H510.0 V355.5" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 416.5 V428.5 H510.0 V437.5" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="177.5" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="202.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Cromatina, rivales y canales de</tspan><tspan x="510.0" dy="19">tinción</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="259.5" width="160" height="75" fill="white" stroke="black"/>
+<text x="420.0" y="292.5" font-size="16" text-anchor="middle"><tspan x="420.0" dy="0">Muestras</tspan><tspan x="420.0" dy="19">citoplasmáticas</tspan></text>
+</g>
+<g data-method-block="2"><rect x="520" y="259.5" width="160" height="75" fill="white" stroke="black"/>
+<text x="600.0" y="283.0" font-size="16" text-anchor="middle"><tspan x="600.0" dy="0">Muestras</tspan><tspan x="600.0" dy="19">exteriores y</tspan><tspan x="600.0" dy="19">competidoras</tspan></text>
+</g>
+<g data-method-block="3"><rect x="340" y="358.5" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="392.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Ajuste de mezclas gaussianas</tspan></text>
+</g>
+<g data-method-block="4"><rect x="340" y="440.5" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="474.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Evidencia de pertenencia regional</tspan></text>
+</g>
+<path d="M718 387.5 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="379.5" font-size="14" text-anchor="start" data-parameter-slot="0"><tspan x="730" dy="0">Componentes según la</tspan><tspan x="730" dy="19">configuración</tspan></text>
+</g></svg>

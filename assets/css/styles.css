@@ -20,32 +20,22 @@ table{border-collapse:collapse;width:100%;max-width:680px;font-size:14px}th,td{b
 .step-heading{display:flex;justify-content:space-between;align-items:center;gap:15px}
 .step-heading h3{font-size:17px;margin:0 0 12px}
 .step-heading button{margin:0 0 12px;padding:7px 13px}
-.step-state,.step-source{font-size:12px!important;color:#756a7d}
-.step-equation{overflow-x:auto;padding:12px 0 18px;font-size:19px}
-.step-parameters{font-size:12px;margin:12px 0}
-.step-parameters>div{display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,2fr);gap:12px;border-bottom:1px solid #eee8f1;padding:7px 0}
-.step-parameters dt{overflow-wrap:anywhere;color:#756a7d}
-.step-parameters dd{margin:0;overflow-wrap:anywhere}
-#operation-panel details{margin:12px 0}
-#operation-panel summary{font-size:12px;padding:10px}
-#operation-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:14px;font-size:11px;line-height:1.65}
+.step-state{font-size:12px!important;color:#756a7d}
+.method-figure{margin:18px 0 24px;overflow-x:auto;max-width:100%;background:white}
+.method-figure img{display:block;width:100%;height:auto;aspect-ratio:auto;border:0;background:white;min-width:760px}
+.step-explanation{margin:16px 0!important;max-width:960px}
+.step-equation{display:flex;justify-content:center;margin:22px 0 28px;overflow-x:auto}
+.step-equation img{display:block;width:auto;max-width:100%;height:auto;max-height:135px;aspect-ratio:auto;border:0;background:white}
 #operation-panel h4{font-size:14px;margin:18px 0 12px}
-#operation-panel label{font-size:12px}
-#operation-panel label select{margin-top:8px}
+#operation-panel label{font-size:12px;margin:12px 0;max-width:520px}
+#operation-panel label select{margin-top:6px}
+#operation-panel details{margin:16px 0}
+#operation-panel summary{font-size:12px;padding:10px}
 .step-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
 .step-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px}
 .step-images figure{margin-bottom:12px}
 .step-images img{width:100%;max-height:230px;object-fit:contain;aspect-ratio:1}
 .step-images figcaption{font-size:11px;line-height:1.4;overflow-wrap:anywhere}
-.step-proposals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.step-proposals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:12px}
 .chosen-proposal{font-weight:bold;background:var(--lavender);padding:5px}
-@media(max-width:600px){.step-comparison,.step-proposals{grid-template-columns:1fr}.step-equation{font-size:16px}#operation-panel{min-width:0}}
-.step-hierarchy-scroll{max-width:100%;overflow-x:auto;margin:18px 0 24px;background:white}
-.step-hierarchy{display:flex;width:1162px;align-items:flex-start;padding:1px;zoom:.85}
-.step-hierarchy>svg{flex:0 0 310px}
-.step-flow-viewport{flex:0 0 852px;width:852px;overflow:auto;border:1px solid black;background:white;overscroll-behavior:contain}
-.step-flow-viewport>svg,.step-helper>svg{display:block;width:850px;max-width:none;height:auto}
-#operation-panel .step-helper{margin:0;border:0;border-top:1px solid black}
-#operation-panel .step-helper summary{font:700 13px Arial,Helvetica,sans-serif;border-bottom:1px solid black;border-radius:0;padding:9px;background:#ebe0f3}
-.step-config-values>div{padding:0 14px}
-.step-explanation{margin:20px 0 0!important}
+@media(max-width:600px){.step-comparison,.step-proposals{grid-template-columns:1fr}#operation-panel{min-width:0}}

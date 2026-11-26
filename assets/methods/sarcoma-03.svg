@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-labelledby="title desc" data-block-count="5">
+<title id="title">Textura y orientación de fibras</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="298" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Preprocesamiento</tspan></text>
+<g data-stage-operation="sarcoma-01" data-selected="false"><rect x="26" y="58" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="93.0" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Filtrado bilateral</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="sarcoma-02" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="164.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">CIELAB y separación</tspan><tspan x="118" dy="17">H&amp;E</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="sarcoma-03" data-selected="true"><rect x="26" y="218" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="244.5" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Gabor y tensor de</tspan><tspan x="118" dy="17">orientación</tspan></text>
+</g>
+<path d="M210 218 L300 12 M210 278 L300 498" stroke="black" fill="none" data-expansion-lines="2"/>
+<rect x="300" y="12" width="688" height="486" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Textura y orientación de fibras</tspan></text>
+<path d="M510.0 137.0 V149.0 H510.0 V158.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 219.0 V231.0 H510.0 V240.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 301.0 V313.0 H510.0 V322.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 383.0 V395.0 H510.0 V404.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="79.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="113.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Luminancia de la imagen</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="161.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="195.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Banco de filtros de Gabor</tspan></text>
+</g>
+<g data-method-block="2"><rect x="340" y="243.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="277.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Energía de textura orientada</tspan></text>
+</g>
+<g data-method-block="3"><rect x="340" y="325.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="359.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Tensor de estructura local</tspan></text>
+</g>
+<g data-method-block="4"><rect x="340" y="407.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="441.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Mapas de fibras y orientación</tspan></text>
+</g>
+<path d="M718 190.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="182.0" font-size="14" text-anchor="start" data-parameter-slot="0"><tspan x="730" dy="0">Orientaciones y escalas del</tspan><tspan x="730" dy="19">banco</tspan></text>
+<path d="M718 354.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="346.0" font-size="14" text-anchor="start" data-parameter-slot="1"><tspan x="730" dy="0">Dirección y contraste</tspan><tspan x="730" dy="19">locales</tspan></text>
+</g></svg>

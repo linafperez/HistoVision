@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 428" role="img" aria-labelledby="title desc" data-block-count="4">
+<title id="title">Conectividad con el foco</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="298" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Posprocesamiento</tspan></text>
+<g data-stage-operation="sarcoma-10" data-selected="true"><rect x="26" y="58" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="93.0" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Conectividad regional</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M210 58 L300 12 M210 118 L300 416" stroke="black" fill="none" data-expansion-lines="2"/>
+<g data-stage-operation="sarcoma-11" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="164.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Relleno de huecos</tspan><tspan x="118" dy="17">pequeños</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="sarcoma-12" data-selected="false"><rect x="26" y="218" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="244.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Conservación de la</tspan><tspan x="118" dy="17">cromatina fija</tspan></text>
+</g>
+<rect x="300" y="12" width="688" height="404" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Conectividad con el foco</tspan></text>
+<path d="M510.0 137.0 V149.0 H510.0 V158.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 219.0 V231.0 H510.0 V240.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 301.0 V313.0 H510.0 V322.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="79.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="103.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Máscara candidata y foco</tspan><tspan x="510.0" dy="19">cromatínico</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="161.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="195.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Restricción al dominio admisible</tspan></text>
+</g>
+<g data-method-block="2"><rect x="340" y="243.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="277.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Componentes conectados al foco</tspan></text>
+</g>
+<g data-method-block="3"><rect x="340" y="325.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="359.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Máscara celular conectada</tspan></text>
+</g>
+</g></svg>

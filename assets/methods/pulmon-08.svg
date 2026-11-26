@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 642" role="img" aria-labelledby="title desc" data-block-count="4">
+<title id="title">Selección cromatínica por evidencia</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="618" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Procesamiento</tspan></text>
+<g data-stage-operation="pulmon-04" data-selected="false"><rect x="26" y="58" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="84.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Multi-Otsu y</tspan><tspan x="118" dy="17">competencia regional</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="pulmon-05" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="164.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Territorios por coste</tspan><tspan x="118" dy="17">cromático</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="pulmon-06" data-selected="false"><rect x="26" y="218" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="244.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Grafo multicanal y</tspan><tspan x="118" dy="17">fusión adyacente</tspan></text>
+</g>
+<path d="M118 278 V294" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="pulmon-07" data-selected="false"><rect x="26" y="298" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="324.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Relieve local y</tspan><tspan x="118" dy="17">asociación de focos</tspan></text>
+</g>
+<path d="M118 358 V374" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="pulmon-08" data-selected="true"><rect x="26" y="378" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="396.0" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Selección</tspan><tspan x="118" dy="17">cromatínica por</tspan><tspan x="118" dy="17">evidencia</tspan></text>
+</g>
+<path d="M118 438 V454" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M210 378 L300 12 M210 438 L300 630" stroke="black" fill="none" data-expansion-lines="2"/>
+<g data-stage-operation="pulmon-09" data-selected="false"><rect x="26" y="458" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="484.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Apariencia LAB y</tspan><tspan x="118" dy="17">cortes espaciales</tspan></text>
+</g>
+<path d="M118 518 V534" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="pulmon-10" data-selected="false"><rect x="26" y="538" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="564.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Selección automática</tspan><tspan x="118" dy="17">del cuerpo</tspan></text>
+</g>
+<rect x="300" y="12" width="688" height="618" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Selección cromatínica por evidencia</tspan></text>
+<path d="M510.0 244.0 V256.0 H510.0 V265.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 326.0 V338.0 H510.0 V347.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 408.0 V420.0 H510.0 V429.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="186.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="220.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Propuestas cromatínicas</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="268.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="292.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Evaluación de tinción y</tspan><tspan x="510.0" dy="19">delimitación</tspan></text>
+</g>
+<g data-method-block="2"><rect x="340" y="350.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="374.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Comparación de la mejora de</tspan><tspan x="510.0" dy="19">evidencia</tspan></text>
+</g>
+<g data-method-block="3"><rect x="340" y="432.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="456.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Selección de la propuesta</tspan><tspan x="510.0" dy="19">cromatínica</tspan></text>
+</g>
+<path d="M718 379.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="371.0" font-size="14" text-anchor="start" data-parameter-slot="0"><tspan x="730" dy="0">Ganancia mínima de</tspan><tspan x="730" dy="19">evidencia</tspan></text>
+</g></svg>

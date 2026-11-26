@@ -1,4 +1,4 @@
-import pathlib,json,sys,argparse,tempfile
+import pathlib,json,sys,argparse,tempfile,re
 import numpy as np
 from playwright.sync_api import sync_playwright
 def numeric_equal(a,b,path=""):
@@ -67,7 +67,7 @@ window.Worker=class extends NativeWorker {
   page.wait_for_selector('#diagram svg')
   count=page.locator('#diagram [data-operation]').count()
   sent=page.evaluate('window.analysisCount')
-  assert page.evaluate('Object.keys(window.receivedResults.at(-1).flujos_etapas).length')>20
+  catalog=json.loads((ROOT/'assets/methods/catalog.json').read_text(encoding='utf8'))
   total_calls=0
   for i in range(count):
    group=page.locator('#diagram [data-operation]').nth(i)
@@ -77,32 +77,32 @@ window.Worker=class extends NativeWorker {
    assert page.locator('#operation-panel').is_visible()
    step=page.evaluate('window.receivedResults.at(-1).etapas['+str(i)+']')
    assert page.locator('#operation-panel h3').inner_text()==step['nombre']
-   assert page.locator('#operation-panel [data-stage-operation][data-selected=true]').count()==1
-   assert page.locator('#operation-panel [data-expansion-line]').count()==2
-   assert page.locator('#operation-panel [data-flow-source]').count()>=1
-   assert page.locator('#operation-panel .step-hierarchy [role=button],#operation-panel .step-hierarchy [data-operation]').count()==0
-   assert page.locator('#operation-panel .step-hierarchy').evaluate('(node)=>node.compareDocumentPosition(document.querySelector(".step-explanation")) & Node.DOCUMENT_POSITION_FOLLOWING')
+   page.wait_for_selector('#operation-panel .method-figure img[data-ready=true]')
+   figure=page.evaluate("""async()=>{
+    const image=document.querySelector('.method-figure img');
+    const svg=new DOMParser().parseFromString(await (await fetch(image.src)).text(),'image/svg+xml');
+    return {blocks:svg.querySelectorAll('[data-method-block]').length,
+     selected:svg.querySelector('[data-selected=true]').getAttribute('data-stage-operation'),
+     notes:svg.querySelectorAll('[data-parameter-slot]').length,
+     buttons:svg.querySelectorAll('[role=button]').length};
+   }""")
+   assert 2<=figure['blocks']<=6 and figure['notes']<=2 and figure['buttons']==0
+   assert figure['selected']==step['id']
+   assert page.locator('#operation-panel .step-helper,#operation-panel pre,#operation-panel math').count()==0
+   assert page.locator('#operation-panel .step-explanation').count()==1
+   assert page.locator('#operation-panel .step-equation img').count()==int('formula' in catalog[step['id']])
+   page.wait_for_function('[...document.querySelectorAll(".method-figure img,.step-equation img")].every(n=>n.complete&&n.naturalWidth>0)')
+   assert not re.search(r'\b(previous|prepared|return|pair_evidence|contour5|details|mode)\b',page.locator('#operation-panel').inner_text())
    if step['estado']=='no_ejecutada':
-    assert page.locator('#operation-panel img').count()==0
+    assert page.locator('#operation-panel .step-images img').count()==0
    else:
     total_calls+=len(step['llamadas'])
     for index,call in enumerate(step['llamadas']):
      selector=page.locator('#operation-panel select')
      if selector.count():selector.select_option(str(index))
-     assert page.locator('#operation-panel .step-flow-viewport > svg').get_attribute('data-flow-source')==call['flujo_id'] or call['flujo_id'].startswith('cv2.')
-     assert page.locator('#operation-panel [data-edge-type=annotation]').count()>0
-     assert page.locator('#operation-panel .step-explanation').count()==1
-     if call['funcion']=='threshold' and call['parametros'].get('criterio')!='Otsu':
-      assert page.locator('#operation-panel math').count()==0
-     if call['funcion']=='bilateralFilter':
-      assert page.locator('#operation-panel math').count()==1
-     if call['funcion']=='select_body':
-      helper=page.locator('#operation-panel .step-helper').first
-      if helper.count():
-       helper.evaluate('(node)=>node.open=true')
-       helper.locator('svg').wait_for()
-       assert helper.locator('[data-suboperation]').count()>2
-     for detail in page.locator('#operation-panel details:not(.step-helper)').all():detail.evaluate('(node)=>node.open=true')
+     page.wait_for_selector('#operation-panel .method-figure img[data-ready=true]')
+     page.wait_for_function('[...document.querySelectorAll(".method-figure img,.step-equation img")].every(n=>n.complete&&n.naturalWidth>0)')
+     for detail in page.locator('#operation-panel details').all():detail.evaluate('(node)=>node.open=true')
      image_refs=[pic for field in ('entrada','salida','intermedios') for pic in call[field]]
      ids=[ref['imagen_id'] for ref in image_refs]
      assert page.evaluate('''keys => {
@@ -110,10 +110,13 @@ window.Worker=class extends NativeWorker {
        const images=window.receivedResults.at(-1).imagenes_etapas;
        return keys.every(key=>sources.includes(images[key]));
      }''',ids)
-     if call['parametros']:
-      assert page.locator('#operation-panel .step-parameters').count()
+     assert page.locator('#operation-panel .step-parameters').count()==0
    assert page.evaluate('window.analysisCount')==sent
    print(step['id'],len(step['llamadas']),'llamadas comprobadas',flush=True)
+  if folder.name=='canine_cutaneous_mast_cell_tumor':
+   page.locator('#diagram [data-operation="mastocitoma-06"]').click()
+   page.wait_for_selector('#operation-panel .method-figure img[data-ready=true]')
+   page.locator('#operation-panel').screenshot(path=str(args.output/'academic-reconstruction.png'))
   if folder.name=='canine_lung_cancer':
    page.locator('#diagram [data-operation]').first.click()
    page.locator('#diagram [data-operation]').first.click()

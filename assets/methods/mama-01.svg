@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 346" role="img" aria-labelledby="title desc" data-block-count="3">
+<title id="title">Filtrado bilateral</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="298" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Preprocesamiento</tspan></text>
+<g data-stage-operation="mama-01" data-selected="true"><rect x="26" y="58" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="93.0" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Filtrado bilateral</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M210 58 L300 12 M210 118 L300 334" stroke="black" fill="none" data-expansion-lines="2"/>
+<g data-stage-operation="mama-02" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="164.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Mapas de tinción y</tspan><tspan x="118" dy="17">CIELAB</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="mama-03" data-selected="false"><rect x="26" y="218" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="244.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Gradientes y textura</tspan><tspan x="118" dy="17">local</tspan></text>
+</g>
+<rect x="300" y="12" width="688" height="322" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Filtrado bilateral</tspan></text>
+<path d="M510.0 137.0 V149.0 H510.0 V158.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 219.0 V231.0 H510.0 V240.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="79.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="113.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Imagen RGB</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="161.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="195.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Filtrado bilateral</tspan></text>
+</g>
+<g data-method-block="2"><rect x="340" y="243.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="277.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Imagen suavizada</tspan></text>
+</g>
+<path d="M718 164.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="156.0" font-size="14" text-anchor="start" data-parameter-slot="0"><tspan x="730" dy="0">Proximidad espacial</tspan></text>
+<path d="M718 216.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="208.0" font-size="14" text-anchor="start" data-parameter-slot="1"><tspan x="730" dy="0">Semejanza cromática</tspan></text>
+</g></svg>

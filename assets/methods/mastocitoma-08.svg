@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-labelledby="title desc" data-block-count="5">
+<title id="title">Rescate del foco oscuro</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="458" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Procesamiento</tspan></text>
+<g data-stage-operation="mastocitoma-04" data-selected="false"><rect x="26" y="58" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="84.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Marcadores</tspan><tspan x="118" dy="17">cromatínicos</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="mastocitoma-05" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="173.0" font-size="15" text-anchor="middle"><tspan x="118" dy="0">GrabCut local</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="mastocitoma-06" data-selected="false"><rect x="26" y="218" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="253.0" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Reconstrucción BR/H</tspan></text>
+</g>
+<path d="M118 278 V294" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="mastocitoma-07" data-selected="false"><rect x="26" y="298" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="324.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Asociación de</tspan><tspan x="118" dy="17">agrupaciones</tspan></text>
+</g>
+<path d="M118 358 V374" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="mastocitoma-08" data-selected="true"><rect x="26" y="378" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="404.5" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Rescate acotado del</tspan><tspan x="118" dy="17">foco oscuro</tspan></text>
+</g>
+<path d="M210 378 L300 12 M210 438 L300 498" stroke="black" fill="none" data-expansion-lines="2"/>
+<rect x="300" y="12" width="688" height="486" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Rescate del foco oscuro</tspan></text>
+<path d="M510.0 137.0 V149.0 H510.0 V158.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 219.0 V231.0 H510.0 V240.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 301.0 V313.0 H510.0 V322.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 383.0 V395.0 H510.0 V404.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="79.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="113.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Mapas Blue Ratio, H&amp;E y densidad</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="161.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="195.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Identificación de focos densos</tspan></text>
+</g>
+<g data-method-block="2"><rect x="340" y="243.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="277.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Dominancia y posición del foco</tspan></text>
+</g>
+<g data-method-block="3"><rect x="340" y="325.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="349.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Comprobación de tinción y</tspan><tspan x="510.0" dy="19">frontera</tspan></text>
+</g>
+<g data-method-block="4"><rect x="340" y="407.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="441.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Máscaras revisadas</tspan></text>
+</g>
+</g></svg>

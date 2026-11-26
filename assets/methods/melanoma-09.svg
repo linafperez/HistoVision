@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 562" role="img" aria-labelledby="title desc" data-block-count="5">
+<title id="title">Corte de una banda de transición</title>
+<desc id="desc">Etapa principal a la izquierda, operación seleccionada en lavanda y resumen metodológico a la derecha. Las imágenes del análisis se muestran debajo de esta figura.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="black" stroke-width="1">
+<rect x="8" y="12" width="220" height="538" fill="white" stroke="black"/>
+<rect x="8" y="12" width="220" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Procesamiento</tspan></text>
+<g data-stage-operation="melanoma-04" data-selected="false"><rect x="26" y="58" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="84.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Segmentación local</tspan><tspan x="118" dy="17">con control</tspan></text>
+</g>
+<path d="M118 118 V134" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="melanoma-05" data-selected="false"><rect x="26" y="138" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="164.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Doble umbral y</tspan><tspan x="118" dy="17">reconstrucción</tspan></text>
+</g>
+<path d="M118 198 V214" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="melanoma-06" data-selected="false"><rect x="26" y="218" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="244.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Identificación de</tspan><tspan x="118" dy="17">focos densos</tspan></text>
+</g>
+<path d="M118 278 V294" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="melanoma-07" data-selected="false"><rect x="26" y="298" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="316.0" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Revisión de</tspan><tspan x="118" dy="17">competidores</tspan><tspan x="118" dy="17">externos</tspan></text>
+</g>
+<path d="M118 358 V374" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="melanoma-08" data-selected="false"><rect x="26" y="378" width="184" height="60" fill="white" stroke="black"/>
+<text x="118" y="404.5" font-size="15" text-anchor="middle"><tspan x="118" dy="0">Selección del foco</tspan><tspan x="118" dy="17">dominante</tspan></text>
+</g>
+<path d="M118 438 V454" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-stage-operation="melanoma-09" data-selected="true"><rect x="26" y="458" width="184" height="60" fill="#EBE0F3" stroke="black"/>
+<text x="118" y="484.5" font-size="15" text-anchor="middle" font-weight="bold"><tspan x="118" dy="0">Banda exterior y</tspan><tspan x="118" dy="17">GMM condicional</tspan></text>
+</g>
+<path d="M210 458 L300 12 M210 518 L300 550" stroke="black" fill="none" data-expansion-lines="2"/>
+<rect x="300" y="12" width="688" height="538" fill="white" stroke="black"/>
+<rect x="300" y="12" width="688" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="644" y="32" font-size="16" text-anchor="middle" font-weight="bold"><tspan x="644" dy="0">Corte de una banda de transición</tspan></text>
+<path d="M510.0 204.0 V216.0 H420.0 V225.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 204.0 V216.0 H600.0 V225.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M420.0 286.0 V298.0 H510.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M600.0 286.0 V298.0 H510.0 V307.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<path d="M510.0 368.0 V380.0 H510.0 V389.0" stroke="black" fill="none" marker-end="url(#arrow)"/>
+<g data-method-block="0"><rect x="340" y="146.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="180.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Cromatina y cuerpo provisional</tspan></text>
+</g>
+<g data-method-block="1"><rect x="340" y="228.0" width="160" height="58" fill="white" stroke="black"/>
+<text x="420.0" y="252.5" font-size="16" text-anchor="middle"><tspan x="420.0" dy="0">Muestras</tspan><tspan x="420.0" dy="19">interiores</tspan></text>
+</g>
+<g data-method-block="2"><rect x="520" y="228.0" width="160" height="58" fill="white" stroke="black"/>
+<text x="600.0" y="252.5" font-size="16" text-anchor="middle"><tspan x="600.0" dy="0">Muestras</tspan><tspan x="600.0" dy="19">exteriores</tspan></text>
+</g>
+<g data-method-block="3"><rect x="340" y="310.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="334.5" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Contraste de apariencia y corte</tspan><tspan x="510.0" dy="19">espacial</tspan></text>
+</g>
+<g data-method-block="4"><rect x="340" y="392.0" width="340" height="58" fill="white" stroke="black"/>
+<text x="510.0" y="426.0" font-size="16" text-anchor="middle"><tspan x="510.0" dy="0">Contorno celular de transición</tspan></text>
+</g>
+<path d="M718 313.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="305.0" font-size="14" text-anchor="start" data-parameter-slot="0"><tspan x="730" dy="0">Interior citoplasmático</tspan></text>
+<path d="M718 365.0 H683" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="730" y="357.0" font-size="14" text-anchor="start" data-parameter-slot="1"><tspan x="730" dy="0">Banda exterior local</tspan></text>
+</g></svg>

@@ -1,0 +1,793 @@
+{
+  "mastocitoma-01": {
+    "figure": "assets/methods/mastocitoma-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "mastocitoma-02": {
+    "figure": "assets/methods/mastocitoma-02.svg",
+    "profile": "multiscale",
+    "explanation": "Se combinan canales de color, deconvolución H&E y respuestas de contraste a distintas escalas. Estas señales complementarias permiten localizar material teñido con diferente intensidad y extensión.",
+    "title": "Tinción a varias escalas",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "mastocitoma-03": {
+    "figure": "assets/methods/mastocitoma-03.svg",
+    "profile": "stain",
+    "explanation": "CIELAB separa luminancia y cromaticidad, mientras que H&E, Blue Ratio y densidad óptica describen aspectos complementarios de la tinción. Las respuestas se normalizan para construir candidatos y fronteras regionales.",
+    "title": "Separación cromática y de tinción",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "mastocitoma-04": {
+    "figure": "assets/methods/mastocitoma-04.svg",
+    "profile": "markers",
+    "explanation": "Los candidatos oscuros se separan en componentes conectados y se revisan respecto al foco celular. Su posición y tinción permiten asignar marcadores de primer plano, fondo y regiones inciertas.",
+    "title": "Marcadores cromatínicos",
+    "blocks": 5
+  },
+  "mastocitoma-05": {
+    "figure": "assets/methods/mastocitoma-05.svg",
+    "profile": "grabcut",
+    "explanation": "GrabCut ajusta modelos de apariencia de primer plano y fondo a partir de los marcadores. Un corte de grafos combina esos modelos con la continuidad entre píxeles para obtener la región celular candidata.",
+    "title": "Segmentación con GrabCut",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "mastocitoma-06": {
+    "figure": "assets/methods/mastocitoma-06.svg",
+    "profile": "reconstruct_mast",
+    "explanation": "La respuesta BR/H define semillas intensamente teñidas y una región débil que puede recuperarse por conectividad. Los componentes añadidos se aceptan según distancia, apoyo de tinción y barrera de borde; los dudosos quedan separados.",
+    "title": "Reconstrucción BR/H",
+    "blocks": 6,
+    "formula": {
+      "image": "assets/methods/formulas/reconstruction.svg",
+      "label": "Reconstrucción: componentes de la región admisible que contactan con las semillas"
+    }
+  },
+  "mastocitoma-07": {
+    "figure": "assets/methods/mastocitoma-07.svg",
+    "profile": "association",
+    "explanation": "La asociación evalúa contacto, separación y continuidad de tinción entre componentes. Las barreras de la imagen ayudan a distinguir agrupaciones del foco de estructuras vecinas o material ambiguo.",
+    "title": "Asociación de agrupaciones",
+    "blocks": 5
+  },
+  "mastocitoma-08": {
+    "figure": "assets/methods/mastocitoma-08.svg",
+    "profile": "rescue_mast",
+    "explanation": "El rescate revisa focos oscuros con apoyo de varias señales de tinción. Solo actualiza la propuesta cuando la dominancia, la posición y el soporte de las fronteras cumplen los criterios establecidos; en otro caso conserva la estimación disponible.",
+    "title": "Rescate del foco oscuro",
+    "blocks": 5
+  },
+  "mastocitoma-09": {
+    "figure": "assets/methods/mastocitoma-09.svg",
+    "profile": "local_contour",
+    "explanation": "El contorno se revisa dentro de una banda admisible definida por el tejido y los marcadores. La cromatina y el contacto con el foco restringen la modificación para conservar una región celular coherente.",
+    "title": "Refinamiento local del contorno",
+    "blocks": 5
+  },
+  "mastocitoma-10": {
+    "figure": "assets/methods/mastocitoma-10.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "mastocitoma-11": {
+    "figure": "assets/methods/mastocitoma-11.svg",
+    "profile": "independent",
+    "explanation": "La cromatina seleccionada se conserva de forma independiente de la estimación celular. La posible discordancia entre ambas máscaras se mantiene visible y se utiliza en el control de calidad.",
+    "title": "Conservación de cromatina",
+    "blocks": 3
+  },
+  "pulmon-01": {
+    "figure": "assets/methods/pulmon-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "pulmon-02": {
+    "figure": "assets/methods/pulmon-02.svg",
+    "profile": "multiscale",
+    "explanation": "Se combinan canales de color, deconvolución H&E y respuestas de contraste a distintas escalas. Estas señales complementarias permiten localizar material teñido con diferente intensidad y extensión.",
+    "title": "Tinción a varias escalas",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "pulmon-03": {
+    "figure": "assets/methods/pulmon-03.svg",
+    "profile": "appearance_maps",
+    "explanation": "Los canales de color y tinción se complementan con la variación de intensidad del vecindario. Su combinación describe la apariencia del citoplasma y del tejido exterior sin reducirlos a un único umbral.",
+    "title": "Color y textura local",
+    "blocks": 4
+  },
+  "pulmon-04": {
+    "figure": "assets/methods/pulmon-04.svg",
+    "profile": "multi_competition",
+    "explanation": "Multi-Otsu separa clases de tinción y facilita la construcción de marcadores. La competencia regional delimita territorios de los focos y del exterior, a partir de los cuales se forman las propuestas celular y cromatínica.",
+    "title": "Multi-Otsu y competencia regional",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/multiotsu.svg",
+      "label": "Multi-Otsu: maximización de la varianza entre clases"
+    }
+  },
+  "pulmon-05": {
+    "figure": "assets/methods/pulmon-05.svg",
+    "profile": "color_territory",
+    "explanation": "El color, la tinción y las fronteras definen costes de acceso a los territorios de los focos. La competencia por coste y la asociación de regiones permiten estimar el cuerpo sin imponer una envolvente geométrica fija.",
+    "title": "Territorios por coste cromático",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/cost.svg",
+      "label": "Distancia geodésica de coste mínimo entre semilla y píxel"
+    }
+  },
+  "pulmon-06": {
+    "figure": "assets/methods/pulmon-06.svg",
+    "profile": "graph_merge",
+    "explanation": "La imagen se divide en parcelas y se conectan las que comparten frontera. La fusión combina semejanza de apariencia y barrera de contacto, actualizando las propiedades de las regiones agregadas.",
+    "title": "Grafo multicanal y fusión",
+    "blocks": 5
+  },
+  "pulmon-07": {
+    "figure": "assets/methods/pulmon-07.svg",
+    "profile": "relief",
+    "explanation": "El relieve de tinción permite recuperar material oscuro que una separación global puede omitir. Los candidatos se reconstruyen y se revisan por contacto y apoyo multicanal antes de asociarlos al foco.",
+    "title": "Relieve local y focos",
+    "blocks": 5
+  },
+  "pulmon-08": {
+    "figure": "assets/methods/pulmon-08.svg",
+    "profile": "select_chrom",
+    "explanation": "Las propuestas cromatínicas se comparan con indicadores de tinción y delimitación obtenidos de la imagen. Una alternativa sustituye a la mejor disponible cuando supera la ganancia mínima establecida; el criterio no expresa una probabilidad de exactitud anatómica.",
+    "title": "Selección cromatínica por evidencia",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/gain.svg",
+      "label": "Condición de ganancia mínima de evidencia cromatínica"
+    }
+  },
+  "pulmon-09": {
+    "figure": "assets/methods/pulmon-09.svg",
+    "profile": "appearance_cut",
+    "explanation": "Las muestras citoplasmáticas y exteriores definen modelos de apariencia de la imagen actual. Sus diferencias de verosimilitud se combinan con las fronteras y las restricciones espaciales para generar una propuesta celular.",
+    "title": "Apariencia regional y cortes",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gmm.svg",
+      "label": "Mezcla de distribuciones gaussianas para la apariencia"
+    }
+  },
+  "pulmon-10": {
+    "figure": "assets/methods/pulmon-10.svg",
+    "profile": "select_body",
+    "explanation": "Las estimaciones celulares se revisan por concordancia con la cromatina, posible intrusión de vecinos y apoyo del borde. La selección prioriza las propuestas sin incidencias y utiliza después la puntuación de evidencia celular.",
+    "title": "Selección de la región celular",
+    "blocks": 5
+  },
+  "pulmon-11": {
+    "figure": "assets/methods/pulmon-11.svg",
+    "profile": "connect",
+    "explanation": "La máscara candidata se restringe al tejido admisible y se conservan los componentes que contactan con el foco. Así se eliminan fragmentos aislados y regiones excluidas sin alterar la cromatina seleccionada.",
+    "title": "Conectividad con el foco",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/connectivity.svg",
+      "label": "Componentes de la máscara que contactan con el foco"
+    }
+  },
+  "pulmon-12": {
+    "figure": "assets/methods/pulmon-12.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "pulmon-13": {
+    "figure": "assets/methods/pulmon-13.svg",
+    "profile": "independent",
+    "explanation": "La cromatina seleccionada se conserva de forma independiente de la estimación celular. La posible discordancia entre ambas máscaras se mantiene visible y se utiliza en el control de calidad.",
+    "title": "Conservación de cromatina",
+    "blocks": 3
+  },
+  "linfoma-01": {
+    "figure": "assets/methods/linfoma-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "linfoma-02": {
+    "figure": "assets/methods/linfoma-02.svg",
+    "profile": "stain",
+    "explanation": "CIELAB separa luminancia y cromaticidad, mientras que H&E, Blue Ratio y densidad óptica describen aspectos complementarios de la tinción. Las respuestas se normalizan para construir candidatos y fronteras regionales.",
+    "title": "Separación cromática y de tinción",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "linfoma-03": {
+    "figure": "assets/methods/linfoma-03.svg",
+    "profile": "gradient",
+    "explanation": "Los gradientes miden cambios locales de luminancia, cromaticidad o tinción después del suavizado previsto. La magnitud de las derivadas refuerza las transiciones que actúan como barreras entre regiones.",
+    "title": "Gradientes multicanal",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gradient.svg",
+      "label": "Magnitud de las derivadas horizontales y verticales"
+    }
+  },
+  "linfoma-04": {
+    "figure": "assets/methods/linfoma-04.svg",
+    "profile": "lymph_basins",
+    "explanation": "Los marcadores del espacio libre y las fronteras multicanal organizan los territorios del linfoma. La propagación regional y la revisión de cobertura asocian material cromatínico y prolongaciones con apoyo en la imagen.",
+    "title": "Cuencas multicanal y locales",
+    "blocks": 5
+  },
+  "linfoma-05": {
+    "figure": "assets/methods/linfoma-05.svg",
+    "profile": "basin_hierarchy",
+    "explanation": "La jerarquía agrupa cuencas según su apariencia y las barreras que las separan. Los focos cromatínicos seleccionan regiones compatibles y orientan la extensión del territorio celular.",
+    "title": "Jerarquía regional de cuencas",
+    "blocks": 5
+  },
+  "linfoma-06": {
+    "figure": "assets/methods/linfoma-06.svg",
+    "profile": "graph_merge",
+    "explanation": "La imagen se divide en parcelas y se conectan las que comparten frontera. La fusión combina semejanza de apariencia y barrera de contacto, actualizando las propiedades de las regiones agregadas.",
+    "title": "Grafo multicanal y fusión",
+    "blocks": 5
+  },
+  "linfoma-07": {
+    "figure": "assets/methods/linfoma-07.svg",
+    "profile": "contact_lymph",
+    "explanation": "El contacto territorial se contrasta con la continuidad de H&E y Blue Ratio. La distancia y las barreras entre grupos limitan asociaciones que podrían incluir material de un foco vecino.",
+    "title": "Asociación por contacto y tinción",
+    "blocks": 5
+  },
+  "linfoma-08": {
+    "figure": "assets/methods/linfoma-08.svg",
+    "profile": "band",
+    "explanation": "Una banda alrededor del cuerpo provisional aporta muestras del citoplasma y del exterior. Sus modelos de apariencia producen un contraste regional que se combina con las fronteras para revisar la transición celular.",
+    "title": "Corte de una banda de transición",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "linfoma-09": {
+    "figure": "assets/methods/linfoma-09.svg",
+    "profile": "joint",
+    "explanation": "Se comparan parejas de máscaras para mantener la correspondencia entre cuerpo y foco cromatínico. Entre las propuestas consistentes, la puntuación combina evidencia celular y cromatínica con pesos de 0,74 y 0,26.",
+    "title": "Selección conjunta de máscaras",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/joint.svg",
+      "label": "Puntuación conjunta entre las propuestas consistentes"
+    }
+  },
+  "linfoma-10": {
+    "figure": "assets/methods/linfoma-10.svg",
+    "profile": "connect",
+    "explanation": "La máscara candidata se restringe al tejido admisible y se conservan los componentes que contactan con el foco. Así se eliminan fragmentos aislados y regiones excluidas sin alterar la cromatina seleccionada.",
+    "title": "Conectividad con el foco",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/connectivity.svg",
+      "label": "Componentes de la máscara que contactan con el foco"
+    }
+  },
+  "linfoma-11": {
+    "figure": "assets/methods/linfoma-11.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "linfoma-12": {
+    "figure": "assets/methods/linfoma-12.svg",
+    "profile": "independent",
+    "explanation": "La cromatina seleccionada se conserva de forma independiente de la estimación celular. La posible discordancia entre ambas máscaras se mantiene visible y se utiliza en el control de calidad.",
+    "title": "Conservación de cromatina",
+    "blocks": 3
+  },
+  "sarcoma-01": {
+    "figure": "assets/methods/sarcoma-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "sarcoma-02": {
+    "figure": "assets/methods/sarcoma-02.svg",
+    "profile": "stain",
+    "explanation": "CIELAB separa luminancia y cromaticidad, mientras que H&E, Blue Ratio y densidad óptica describen aspectos complementarios de la tinción. Las respuestas se normalizan para construir candidatos y fronteras regionales.",
+    "title": "Separación cromática y de tinción",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "sarcoma-03": {
+    "figure": "assets/methods/sarcoma-03.svg",
+    "profile": "gabor",
+    "explanation": "Los filtros de Gabor describen textura en varias orientaciones y escalas. Sus energías se complementan con el tensor de estructura para representar fibras y transiciones que no se distinguen únicamente por color.",
+    "title": "Textura y orientación de fibras",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gabor.svg",
+      "label": "Filtro de Gabor: envolvente gaussiana y oscilación orientada"
+    }
+  },
+  "sarcoma-04": {
+    "figure": "assets/methods/sarcoma-04.svg",
+    "profile": "sarcoma_graph",
+    "explanation": "Las parcelas combinan color CIELAB y textura Gabor para representar el tejido del sarcoma. La pertenencia armónica combina las afinidades entre regiones, las semillas y el mapa inicial de pertenencia para obtener una propuesta celular.",
+    "title": "Partición LAB y Gabor",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/harmonic.svg",
+      "label": "Pertenencia armónica con afinidades regionales y confianza en el mapa inicial"
+    }
+  },
+  "sarcoma-05": {
+    "figure": "assets/methods/sarcoma-05.svg",
+    "profile": "fixed_chrom",
+    "explanation": "Se conserva la detección cromatínica de la ruta LAB/Gabor como foco común. Las alternativas posteriores estiman el cuerpo celular manteniendo esta hipótesis cromatínica.",
+    "title": "Cromatina de LAB y Gabor",
+    "blocks": 3
+  },
+  "sarcoma-06": {
+    "figure": "assets/methods/sarcoma-06.svg",
+    "profile": "samples",
+    "explanation": "Las muestras se obtienen del citoplasma, del exterior y de las regiones competidoras de la imagen. Las mezclas gaussianas representan su variación cromática y permiten medir la evidencia de pertenencia de cada región.",
+    "title": "Modelos de apariencia regional",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gmm.svg",
+      "label": "Mezcla de distribuciones gaussianas para la apariencia"
+    }
+  },
+  "sarcoma-07": {
+    "figure": "assets/methods/sarcoma-07.svg",
+    "profile": "band",
+    "explanation": "Una banda alrededor del cuerpo provisional aporta muestras del citoplasma y del exterior. Sus modelos de apariencia producen un contraste regional que se combina con las fronteras para revisar la transición celular.",
+    "title": "Corte de una banda de transición",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "sarcoma-08": {
+    "figure": "assets/methods/sarcoma-08.svg",
+    "profile": "spatial",
+    "explanation": "El corte espacial combina costes de apariencia con una penalización por separar regiones vecinas. Las regiones de foco y exterior fijan restricciones, y el flujo máximo determina la partición celular.",
+    "title": "Corte espacial por apariencia",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "sarcoma-09": {
+    "figure": "assets/methods/sarcoma-09.svg",
+    "profile": "select_body",
+    "explanation": "Las estimaciones celulares se revisan por concordancia con la cromatina, posible intrusión de vecinos y apoyo del borde. La selección prioriza las propuestas sin incidencias y utiliza después la puntuación de evidencia celular.",
+    "title": "Selección de la región celular",
+    "blocks": 5
+  },
+  "sarcoma-10": {
+    "figure": "assets/methods/sarcoma-10.svg",
+    "profile": "connect",
+    "explanation": "La máscara candidata se restringe al tejido admisible y se conservan los componentes que contactan con el foco. Así se eliminan fragmentos aislados y regiones excluidas sin alterar la cromatina seleccionada.",
+    "title": "Conectividad con el foco",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/connectivity.svg",
+      "label": "Componentes de la máscara que contactan con el foco"
+    }
+  },
+  "sarcoma-11": {
+    "figure": "assets/methods/sarcoma-11.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "sarcoma-12": {
+    "figure": "assets/methods/sarcoma-12.svg",
+    "profile": "fixed_chrom",
+    "explanation": "Se conserva la detección cromatínica de la ruta LAB/Gabor como foco común. Las alternativas posteriores estiman el cuerpo celular manteniendo esta hipótesis cromatínica.",
+    "title": "Cromatina de LAB y Gabor",
+    "blocks": 3
+  },
+  "mama-01": {
+    "figure": "assets/methods/mama-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "mama-02": {
+    "figure": "assets/methods/mama-02.svg",
+    "profile": "multiscale",
+    "explanation": "Se combinan canales de color, deconvolución H&E y respuestas de contraste a distintas escalas. Estas señales complementarias permiten localizar material teñido con diferente intensidad y extensión.",
+    "title": "Tinción a varias escalas",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "mama-03": {
+    "figure": "assets/methods/mama-03.svg",
+    "profile": "gradient",
+    "explanation": "Los gradientes miden cambios locales de luminancia, cromaticidad o tinción después del suavizado previsto. La magnitud de las derivadas refuerza las transiciones que actúan como barreras entre regiones.",
+    "title": "Gradientes multicanal",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gradient.svg",
+      "label": "Magnitud de las derivadas horizontales y verticales"
+    }
+  },
+  "mama-04": {
+    "figure": "assets/methods/mama-04.svg",
+    "profile": "breast_geodesic",
+    "explanation": "La competencia geodésica entre el foco y el exterior proporciona una región inicial. El contorno evoluciona con la cromatina y el interior estable fijados, evitando que la revisión de la frontera vacíe esas zonas.",
+    "title": "Contorno con interior estable",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/cost.svg",
+      "label": "Distancia geodésica de coste mínimo entre semilla y píxel"
+    }
+  },
+  "mama-05": {
+    "figure": "assets/methods/mama-05.svg",
+    "profile": "breast_reconstruct",
+    "explanation": "Multi-Otsu clasifica la combinación de eosina y luminancia inversa. El contraste entre clases próximas y exteriores define soporte fuerte y débil para reconstruir tejido conectado con la cromatina.",
+    "title": "Multi-Otsu y reconstrucción",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/multiotsu.svg",
+      "label": "Multi-Otsu: maximización de la varianza entre clases"
+    }
+  },
+  "mama-06": {
+    "figure": "assets/methods/mama-06.svg",
+    "profile": "band",
+    "explanation": "Una banda alrededor del cuerpo provisional aporta muestras del citoplasma y del exterior. Sus modelos de apariencia producen un contraste regional que se combina con las fronteras para revisar la transición celular.",
+    "title": "Corte de una banda de transición",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "mama-07": {
+    "figure": "assets/methods/mama-07.svg",
+    "profile": "spatial",
+    "explanation": "El corte espacial combina costes de apariencia con una penalización por separar regiones vecinas. Las regiones de foco y exterior fijan restricciones, y el flujo máximo determina la partición celular.",
+    "title": "Corte espacial por apariencia",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "mama-08": {
+    "figure": "assets/methods/mama-08.svg",
+    "profile": "regional_contour",
+    "explanation": "Chan–Vese refina la máscara sobre el mapa de pertenencia, comparando regiones interiores y exteriores. Las zonas protegidas se conservan y se excluyen rivales y regiones sin apoyo de tejido.",
+    "title": "Contorno activo regional",
+    "blocks": 5
+  },
+  "mama-09": {
+    "figure": "assets/methods/mama-09.svg",
+    "profile": "select_body",
+    "explanation": "Las estimaciones celulares se revisan por concordancia con la cromatina, posible intrusión de vecinos y apoyo del borde. La selección prioriza las propuestas sin incidencias y utiliza después la puntuación de evidencia celular.",
+    "title": "Selección de la región celular",
+    "blocks": 5
+  },
+  "mama-10": {
+    "figure": "assets/methods/mama-10.svg",
+    "profile": "connect",
+    "explanation": "La máscara candidata se restringe al tejido admisible y se conservan los componentes que contactan con el foco. Así se eliminan fragmentos aislados y regiones excluidas sin alterar la cromatina seleccionada.",
+    "title": "Conectividad con el foco",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/connectivity.svg",
+      "label": "Componentes de la máscara que contactan con el foco"
+    }
+  },
+  "mama-11": {
+    "figure": "assets/methods/mama-11.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "mama-12": {
+    "figure": "assets/methods/mama-12.svg",
+    "profile": "independent",
+    "explanation": "La cromatina seleccionada se conserva de forma independiente de la estimación celular. La posible discordancia entre ambas máscaras se mantiene visible y se utiliza en el control de calidad.",
+    "title": "Conservación de cromatina",
+    "blocks": 3
+  },
+  "melanoma-01": {
+    "figure": "assets/methods/melanoma-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "melanoma-02": {
+    "figure": "assets/methods/melanoma-02.svg",
+    "profile": "blue_density",
+    "explanation": "Blue Ratio refuerza la contribución del canal azul respecto a los otros canales. La densidad óptica y la hematoxilina complementan esa respuesta para identificar material oscuro con diferente apariencia cromática.",
+    "title": "Blue Ratio y densidad óptica",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/blueratio.svg",
+      "label": "Blue Ratio calculado a partir de los canales RGB"
+    }
+  },
+  "melanoma-03": {
+    "figure": "assets/methods/melanoma-03.svg",
+    "profile": "stain",
+    "explanation": "CIELAB separa luminancia y cromaticidad, mientras que H&E, Blue Ratio y densidad óptica describen aspectos complementarios de la tinción. Las respuestas se normalizan para construir candidatos y fronteras regionales.",
+    "title": "Separación cromática y de tinción",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/density.svg",
+      "label": "Densidad óptica de los canales de intensidad"
+    }
+  },
+  "melanoma-04": {
+    "figure": "assets/methods/melanoma-04.svg",
+    "profile": "mel_local",
+    "explanation": "La revisión local utiliza el foco y un interior protegido para restringir la evolución geodésica. El cambio solo se acepta si cumple los controles de extensión, cromatina y soporte de la frontera.",
+    "title": "Segmentación local con control",
+    "blocks": 5
+  },
+  "melanoma-05": {
+    "figure": "assets/methods/melanoma-05.svg",
+    "profile": "mel_reconstruct",
+    "explanation": "Dos umbrales separan semillas intensas y una región de apoyo más débil. La reconstrucción por conectividad recupera material unido a las semillas y permite revisar los componentes cromatínicos.",
+    "title": "Doble umbral y reconstrucción",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/reconstruction.svg",
+      "label": "Reconstrucción: componentes de la región admisible que contactan con las semillas"
+    }
+  },
+  "melanoma-06": {
+    "figure": "assets/methods/melanoma-06.svg",
+    "profile": "dense",
+    "explanation": "La densidad óptica y Blue Ratio se combinan con señales de tinción para localizar focos oscuros. Los componentes se separan y se prepara su revisión como foco dominante, competidor o material incierto.",
+    "title": "Identificación de focos densos",
+    "blocks": 4
+  },
+  "melanoma-07": {
+    "figure": "assets/methods/melanoma-07.svg",
+    "profile": "competitors",
+    "explanation": "Los focos externos se revisan mediante su separación, su contacto territorial y la continuidad de tinción. Las barreras de la imagen ayudan a distinguir material asociado de competidores o grupos ambiguos.",
+    "title": "Revisión de competidores externos",
+    "blocks": 4
+  },
+  "melanoma-08": {
+    "figure": "assets/methods/melanoma-08.svg",
+    "profile": "dominant",
+    "explanation": "La elección del foco combina dominancia, posición y evidencia de tinción con controles sobre sus competidores. La propuesta disponible se conserva cuando ninguna alternativa reúne evidencia suficiente.",
+    "title": "Selección del foco dominante",
+    "blocks": 4
+  },
+  "melanoma-09": {
+    "figure": "assets/methods/melanoma-09.svg",
+    "profile": "band",
+    "explanation": "Una banda alrededor del cuerpo provisional aporta muestras del citoplasma y del exterior. Sus modelos de apariencia producen un contraste regional que se combina con las fronteras para revisar la transición celular.",
+    "title": "Corte de una banda de transición",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "melanoma-10": {
+    "figure": "assets/methods/melanoma-10.svg",
+    "profile": "mel_refine",
+    "explanation": "La ampliación por banda exterior se considera únicamente cuando se activa la condición del pipeline. La aceptación exige apoyo de apariencia y frontera, mejor cobertura cromatínica y ausencia de intrusión excesiva.",
+    "title": "Refinamiento celular por evidencia",
+    "blocks": 4
+  },
+  "melanoma-11": {
+    "figure": "assets/methods/melanoma-11.svg",
+    "profile": "connect",
+    "explanation": "La máscara candidata se restringe al tejido admisible y se conservan los componentes que contactan con el foco. Así se eliminan fragmentos aislados y regiones excluidas sin alterar la cromatina seleccionada.",
+    "title": "Conectividad con el foco",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/connectivity.svg",
+      "label": "Componentes de la máscara que contactan con el foco"
+    }
+  },
+  "melanoma-12": {
+    "figure": "assets/methods/melanoma-12.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "neuroendocrino-01": {
+    "figure": "assets/methods/neuroendocrino-01.svg",
+    "profile": "bilateral",
+    "explanation": "El filtro bilateral pondera la proximidad espacial y la semejanza cromática de los píxeles. Suaviza la tinción y conserva las transiciones de color utilizadas en las etapas posteriores.",
+    "title": "Filtrado bilateral",
+    "blocks": 3,
+    "formula": {
+      "image": "assets/methods/formulas/bilateral.svg",
+      "label": "Promedio ponderado por proximidad espacial y semejanza cromática"
+    }
+  },
+  "neuroendocrino-02": {
+    "figure": "assets/methods/neuroendocrino-02.svg",
+    "profile": "appearance_maps",
+    "explanation": "Los canales de color y tinción se complementan con la variación de intensidad del vecindario. Su combinación describe la apariencia del citoplasma y del tejido exterior sin reducirlos a un único umbral.",
+    "title": "Color y textura local",
+    "blocks": 4
+  },
+  "neuroendocrino-03": {
+    "figure": "assets/methods/neuroendocrino-03.svg",
+    "profile": "gradient",
+    "explanation": "Los gradientes miden cambios locales de luminancia, cromaticidad o tinción después del suavizado previsto. La magnitud de las derivadas refuerza las transiciones que actúan como barreras entre regiones.",
+    "title": "Gradientes multicanal",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gradient.svg",
+      "label": "Magnitud de las derivadas horizontales y verticales"
+    }
+  },
+  "neuroendocrino-04": {
+    "figure": "assets/methods/neuroendocrino-04.svg",
+    "profile": "neuro_territory",
+    "explanation": "La jerarquía de regiones organiza el tejido y la tinción alrededor de los focos cromatínicos. La asociación de grupos y la competencia por costes delimitan territorios celulares frente a regiones rivales.",
+    "title": "Territorios de tejido y tinción",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/cost.svg",
+      "label": "Distancia geodésica de coste mínimo entre semilla y píxel"
+    }
+  },
+  "neuroendocrino-05": {
+    "figure": "assets/methods/neuroendocrino-05.svg",
+    "profile": "neuro_intensity",
+    "explanation": "Los componentes extensos se revisan mediante Otsu intracomponente o densidad y contraste local. Las condiciones de tamaño, soporte y conectividad limitan la retirada de material débil antes de comparar las propuestas.",
+    "title": "Intensidad y densidad cromatínica",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/reconstruction.svg",
+      "label": "Reconstrucción: componentes de la región admisible que contactan con las semillas"
+    }
+  },
+  "neuroendocrino-06": {
+    "figure": "assets/methods/neuroendocrino-06.svg",
+    "profile": "neuro_walker",
+    "explanation": "Cuando la evidencia cromatínica inicial es débil, Multi-Otsu prepara candidatos y marcadores para Random Walker. La propagación y la revisión de contacto entre grupos producen una alternativa territorial, sin sustituir automáticamente la ruta inicial.",
+    "title": "Multi-Otsu y Random Walker",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/walker.svg",
+      "label": "Propagación armónica con marcadores fijados en el grafo"
+    }
+  },
+  "neuroendocrino-07": {
+    "figure": "assets/methods/neuroendocrino-07.svg",
+    "profile": "select_chrom",
+    "explanation": "Las propuestas cromatínicas se comparan con indicadores de tinción y delimitación obtenidos de la imagen. Una alternativa sustituye a la mejor disponible cuando supera la ganancia mínima establecida; el criterio no expresa una probabilidad de exactitud anatómica.",
+    "title": "Selección cromatínica por evidencia",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/gain.svg",
+      "label": "Condición de ganancia mínima de evidencia cromatínica"
+    }
+  },
+  "neuroendocrino-08": {
+    "figure": "assets/methods/neuroendocrino-08.svg",
+    "profile": "samples",
+    "explanation": "Las muestras se obtienen del citoplasma, del exterior y de las regiones competidoras de la imagen. Las mezclas gaussianas representan su variación cromática y permiten medir la evidencia de pertenencia de cada región.",
+    "title": "Modelos de apariencia regional",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/gmm.svg",
+      "label": "Mezcla de distribuciones gaussianas para la apariencia"
+    }
+  },
+  "neuroendocrino-09": {
+    "figure": "assets/methods/neuroendocrino-09.svg",
+    "profile": "spatial",
+    "explanation": "El corte espacial combina costes de apariencia con una penalización por separar regiones vecinas. Las regiones de foco y exterior fijan restricciones, y el flujo máximo determina la partición celular.",
+    "title": "Corte espacial por apariencia",
+    "blocks": 5,
+    "formula": {
+      "image": "assets/methods/formulas/energy.svg",
+      "label": "Energía de apariencia y continuidad entre regiones vecinas"
+    }
+  },
+  "neuroendocrino-10": {
+    "figure": "assets/methods/neuroendocrino-10.svg",
+    "profile": "select_body",
+    "explanation": "Las estimaciones celulares se revisan por concordancia con la cromatina, posible intrusión de vecinos y apoyo del borde. La selección prioriza las propuestas sin incidencias y utiliza después la puntuación de evidencia celular.",
+    "title": "Selección de la región celular",
+    "blocks": 5
+  },
+  "neuroendocrino-11": {
+    "figure": "assets/methods/neuroendocrino-11.svg",
+    "profile": "connect",
+    "explanation": "La máscara candidata se restringe al tejido admisible y se conservan los componentes que contactan con el foco. Así se eliminan fragmentos aislados y regiones excluidas sin alterar la cromatina seleccionada.",
+    "title": "Conectividad con el foco",
+    "blocks": 4,
+    "formula": {
+      "image": "assets/methods/formulas/connectivity.svg",
+      "label": "Componentes de la máscara que contactan con el foco"
+    }
+  },
+  "neuroendocrino-12": {
+    "figure": "assets/methods/neuroendocrino-12.svg",
+    "profile": "holes",
+    "explanation": "Se identifican regiones del complemento y se rellenan los huecos que cumplen el límite de área y las restricciones del dominio. Este ajuste elimina discontinuidades internas pequeñas sin incorporar regiones exteriores.",
+    "title": "Relleno de huecos pequeños",
+    "blocks": 5
+  },
+  "neuroendocrino-13": {
+    "figure": "assets/methods/neuroendocrino-13.svg",
+    "profile": "independent",
+    "explanation": "La cromatina seleccionada se conserva de forma independiente de la estimación celular. La posible discordancia entre ambas máscaras se mantiene visible y se utiliza en el control de calidad.",
+    "title": "Conservación de cromatina",
+    "blocks": 3
+  }
+}

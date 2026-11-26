@@ -98,7 +98,7 @@ function render(result) {
     row.append(label,value);return row;
  }));
  const path="assets/diagrams/"+diagrams[result.categoria]+".svg";
- explorer.load(path,result.etapas,result.imagenes_etapas,result.flujos_etapas);
+ explorer.load(path,result.etapas,result.imagenes_etapas);
  $("#diagram-download").href=path;
  $("#warning-list").replaceChildren(...result.advertencias.map(text=>{const li=document.createElement("li");li.textContent=text;return li;}));
  $("#warnings").hidden=result.advertencias.length===0;
