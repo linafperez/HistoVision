@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 840" role="img" aria-labelledby="title desc">
+<title id="title">Arquitectura modular de HistoVision</title>
+<desc id="desc">La interfaz envía la imagen y el tipo tumoral al motor Python ejecutado por Pyodide en un Web Worker. El selector escoge uno de siete pipelines con una interfaz común. Las máscaras alimentan el módulo morfométrico compartido y la visualización de resultados. La trazabilidad observa el motor y entrega los resultados intermedios al explorador. GitHub Pages sirve los recursos estáticos.</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="black"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#181818" font-size="16" text-anchor="middle" stroke-width="1">
+<rect x="325" y="20" width="350" height="78" fill="white" stroke="black"/>
+<rect x="325" y="20" width="350" height="26" fill="#EBE0F3" stroke="black"/>
+<text x="500" y="39" font-weight="bold">Interfaz web</text>
+<text x="500" y="67">Imagen PNG + tipo tumoral elegido</text>
+<text x="500" y="87" font-size="14">HTML · CSS · JavaScript</text>
+<path d="M500 98 V132" fill="none" stroke="black" marker-end="url(#arrow)"/>
+
+<rect x="20" y="135" width="960" height="500" fill="white" stroke="black"/>
+<rect x="20" y="135" width="960" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="500" y="155" font-weight="bold">Procesamiento en el navegador · Pyodide / Web Worker</text>
+<path d="M500 163 V191" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<rect x="330" y="194" width="340" height="66" fill="white" stroke="black"/>
+<text x="500" y="220" font-weight="bold">Selector automático de pipeline</text>
+<text x="500" y="243" font-size="15">Según la categoría seleccionada</text>
+<path d="M500 260 V297" fill="none" stroke="black" marker-end="url(#arrow)"/>
+
+<rect x="270" y="300" width="460" height="160" fill="white" stroke="black"/>
+<rect x="270" y="300" width="460" height="27" fill="#EBE0F3" stroke="black"/>
+<text x="500" y="320" font-weight="bold">Motor de imágenes · Python / OpenCV</text>
+<text x="500" y="353">Mastocitoma · Pulmón · Linfoma</text>
+<text x="500" y="383">Sarcoma · Mama · Melanoma</text>
+<text x="500" y="413">Neuroendocrino</text>
+<text x="500" y="443" font-size="14">Siete estrategias con entrada y salida comunes</text>
+
+<path d="M730 378 H757" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<rect x="760" y="318" width="200" height="120" fill="white" stroke="black"/>
+<rect x="760" y="318" width="200" height="27" fill="#EBE0F3" stroke="black"/>
+<text x="860" y="338" font-weight="bold">Trazabilidad</text>
+<text x="860" y="368" font-size="15">Entradas, salidas</text>
+<text x="860" y="390" font-size="15">y parámetros</text>
+<text x="860" y="420" font-size="14">Copias en memoria</text>
+
+<path d="M500 460 V502" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<rect x="340" y="505" width="320" height="78" fill="white" stroke="black"/>
+<rect x="340" y="505" width="320" height="26" fill="#EBE0F3" stroke="black"/>
+<text x="500" y="524" font-weight="bold">Salida común</text>
+<text x="500" y="552" font-size="15">Máscaras celular y cromatínica</text>
+<text x="500" y="573" font-size="14">Método e indicadores de calidad</text>
+
+<path d="M340 546 H303" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<rect x="40" y="493" width="260" height="100" fill="white" stroke="black"/>
+<rect x="40" y="493" width="260" height="28" fill="#EBE0F3" stroke="black"/>
+<text x="170" y="513" font-weight="bold" font-size="16">Caracterización morfométrica</text>
+<text x="170" y="548">Módulo compartido</text>
+<text x="170" y="574" font-size="14">Mediciones sobre las máscaras</text>
+
+<path d="M170 593 V707" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<path d="M500 583 V707" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<path d="M860 438 V707" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="190" y="670" text-anchor="start" font-size="14">Medidas</text>
+<text x="520" y="670" text-anchor="start" font-size="14">Máscaras y método</text>
+<text x="840" y="670" text-anchor="end" font-size="14">Resultados intermedios</text>
+
+<rect x="40" y="710" width="260" height="86" fill="white" stroke="black"/>
+<rect x="40" y="710" width="260" height="27" fill="#EBE0F3" stroke="black"/>
+<text x="170" y="730" font-weight="bold">Reporte</text>
+<text x="170" y="761" font-size="15">Ocho características morfométricas</text>
+<text x="170" y="783" font-size="14">Impresión / PDF</text>
+
+<rect x="370" y="710" width="260" height="86" fill="white" stroke="black"/>
+<rect x="370" y="710" width="260" height="27" fill="#EBE0F3" stroke="black"/>
+<text x="500" y="730" font-weight="bold">Resultados</text>
+<text x="500" y="761" font-size="15">Original y superposiciones</text>
+<text x="500" y="783" font-size="14">Método y avisos de calidad</text>
+
+<rect x="720" y="710" width="260" height="86" fill="white" stroke="black"/>
+<rect x="720" y="710" width="260" height="27" fill="#EBE0F3" stroke="black"/>
+<text x="850" y="730" font-weight="bold">Explorador interactivo</text>
+<text x="850" y="761" font-size="15">Diagramas y figuras del método</text>
+<text x="850" y="783" font-size="14">Entradas y salidas registradas</text>
+<text x="500" y="826" font-size="14">GitHub Actions → GitHub Pages · Publicación de recursos estáticos</text>
+</g>
+</svg>
